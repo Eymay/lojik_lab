@@ -649,6 +649,176 @@ module decoder3_8_test();
            #10;
            $finish;
        end
-endmodule     
+endmodule
+
+module F1_d_test();
+
+    reg a;
+    reg b;
+    reg c;
+    reg d;
+    
+    wire o_1;
+    
+    F1_d hello(.i_1(a), .i_2(b), .i_3(c), .i_4(d), .o(o_1));
+    
+    initial begin
+           //$dumpfile("test.vcd");
+           //$dumpvars(0,AND_test);
+               a = 0;
+               b = 0;
+               c = 0;
+               #10;
+               a = 0;
+               b = 0;
+               c = 1;
+               #10;
+               a = 0;
+               b = 1;
+               c = 0;
+               #10;
+               a = 0;
+               b = 1;
+               c = 1;
+               #10;
+               a = 1;
+               b = 0;
+               c = 0;
+               #10;
+               a = 1;
+               b = 0;
+               c = 1;
+               #10;
+               a = 1;
+               b = 1;
+               c = 0;
+               #10;
+               a = 1;
+               b = 1;
+               c = 1;
+               #10;
+               $finish;
+           end
+endmodule
+
+
+module F1_e_test();
+
+    reg a;
+    reg b;
+    reg c;
+    reg d;
+    
+    wire o_1;
+    
+    F1_e hello(.i_1(a), .i_2(b), .i_3(c), .i_4(d), .o(o_1));
+    
+    initial begin
+           //$dumpfile("test.vcd");
+           //$dumpvars(0,AND_test);
+               a = 0;
+               b = 0;
+               c = 0;
+               #10;
+               a = 0;
+               b = 0;
+               c = 1;
+               #10;
+               a = 0;
+               b = 1;
+               c = 0;
+               #10;
+               a = 0;
+               b = 1;
+               c = 1;
+               #10;
+               a = 1;
+               b = 0;
+               c = 0;
+               #10;
+               a = 1;
+               b = 0;
+               c = 1;
+               #10;
+               a = 1;
+               b = 1;
+               c = 0;
+               #10;
+               a = 1;
+               b = 1;
+               c = 1;
+               #10;
+               $finish;
+           end
+endmodule
+
+module F2_F3_test ();
+    
+    reg a;
+    reg b;
+    reg c;
+
+    wire d;
+    F2_F3 hello(.i_1(a), .i_2(b),.i_3(c), .o(d));
+    
+    initial begin
+    //$dumpfile("test.vcd");
+    //$dumpvars(0,AND_test);
+        a = 0;
+        b = 0;
+        c = 0;
+        #10;
+        a = 0;
+        b = 0;
+        c = 1;
+        #10;
+        a = 0;
+        b = 1;
+        c = 0;
+        #10;
+        a = 0;
+        b = 1;
+        c = 1;
+        #10;
+        a = 1;
+        b = 0;
+        c = 0;
+        #10;
+        a = 1;
+        b = 0;
+        c = 1;
+        #10;
+        a = 1;
+        b = 1;
+        c = 0;
+        #10;
+        a = 1;
+        b = 1;
+        c = 1;
+        #10;
+        $finish;
+    end
+endmodule
+
+module half_adder_test();
+
+    reg a;
+    reg b;
+    
+    wire c;
+    wire s;
+    
+    half_adder test(.i_1(a), .i_2(b), .o(c), .o(s));
+    
+    initial begin
+    
+        $finish;
+    end
+endmodule
+
+
+    
+    
+         
     
     
