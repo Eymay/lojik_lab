@@ -182,9 +182,7 @@ nand3_gate nand3(.i_1(l2_1), .i_2(l2_2), .i_3(l2_3), .o(o));
 endmodule
 
 //PART 4
-
-module F1_f(input a, b, c, d, output o);
-wire 
+ 
 
 //PART 5
 
