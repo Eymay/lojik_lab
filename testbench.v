@@ -595,3 +595,60 @@ module decoder2_4_test();
            $finish;
        end
 endmodule    
+
+module decoder3_8_test();
+    reg a;
+    reg b;
+    reg c;
+    
+    wire o_1;    
+    wire o_2;
+    wire o_3;
+    wire o_4;
+    wire o_5;
+    wire o_6;
+    wire o_7;
+    wire o_8;
+    
+    decoder3_8 hello(.i_1(a), .i_2(b), .i_3(c),.o(o_1),.o(o_2),.o(o_3),.o(o_4),.o(o_5),.o(o_6),.o(o_7),.o(o_8));
+
+     initial begin
+       //$dumpfile("test.vcd");
+       //$dumpvars(0,AND_test);
+           a = 0;
+           b = 0;
+           c = 0;
+           #10;
+           a = 0;
+           b = 0;
+           c = 1;
+           #10;
+           a = 0;
+           b = 1;
+           c = 0;
+           #10;
+           a = 0;
+           b = 1;
+           c = 1;
+           #10;
+           a = 1;
+           b = 0;
+           c = 0;
+           #10;
+           a = 1;
+           b = 0;
+           c = 1;
+           #10;
+           a = 1;
+           b = 1;
+           c = 0;
+           #10;
+           a = 1;
+           b = 1;
+           c = 1;
+           #10;
+           $finish;
+       end
+endmodule     
+    
+    

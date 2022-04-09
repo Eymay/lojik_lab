@@ -215,7 +215,6 @@ module full_adder(input a, b, c_in, output s, c_out);
 wire l1, l2_1;
 half_adder half_adder1(.a(a), .b(b), .s(l1), .c(l2_1));
 half_adder half_adder2(.a(l1), .b(c_in), .s(s), .c(l2_2));
-
 or_gate or1(.i_1(l2_1), .i_2(l2_2), .o(c_out));
 
 endmodule
