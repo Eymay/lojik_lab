@@ -18,11 +18,12 @@ and_gate and1(.i_1(i_1), .i_2(i_2),.o(temp1));
 and_gate and2(.i_1(temp1),.i_2(i_3),.o(o));
 endmodule
 
- module and4_gate (i_1 , i_2, i_3, o);
+ module and4_gate (i_1 , i_2, i_3, i_4, o);
  // Inputs
  input wire i_1 ;
  input wire i_2 ;
-    input wire i_3 ;
+ input wire i_3 ;
+ input wire i_4;
     
 wire temp1, temp2;
  // Outputs
@@ -223,9 +224,10 @@ endmodule
 
 module 4b_full_adder( a, b, c_in, s, c_out);
 
-input wire a [3:0], b [3:0] ;
-output wire s [3:0] ;
+input wire a [3:0], b [3:0];
+input wire c_in;
 wire c1, c2, c3;
+output wire s [3:0] ;
 output wire c_out ;
 
 full_adder full_adder1(.a(a[0]), .b(b[0]), .c_in(c_in), .s(s[0]), .c_out(c1));
