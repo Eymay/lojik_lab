@@ -200,4 +200,38 @@ or_gate F2(.i_1(l1_4), .i_2(l2), .o(o));
 
 endmodule
 
-//
+//PART 6
+
+module half_adder(input a, b, output s, c);
+
+xor_gate xor1(.i_1(a), .i_2(b), .o(s));
+and_gate and1(.i_1(a), .i_2(b), .o(c));
+
+endmodule
+
+//PART 7
+
+module full_adder(input a, b, c_in, output s, c_out);
+wire l1, l2_1;
+half_adder half_adder1(.a(a), .b(b), .s(l1), .c(l2_1));
+half_adder half_adder2(.a(l1), .b(c_in), .s(s), .c(l2_2));
+
+or_gate or1(.i_1(l2_1), .i_2(l2_2), .o(c_out));
+
+endmodule
+
+//PART 8
+
+module 4b_full_adder( a, b, c_in, s, c_out);
+
+input wire a [3:0], b [3:0] ;
+output wire s [3:0] ;
+wire c1, c2, c3;
+output wire c_out ;
+
+full_adder full_adder1(.a(a[0]), .b(b[0]), .c_in(c_in), .s(s[0]), .c_out(c1));
+full_adder full_adder2(.a(a[1]), .b(b[1]), .c_in(c1), .s(s[1]), .c_out(c2));
+full_adder full_adder3(.a(a[2]), .b(b[2]), .c_in(c2), .s(s[2]), .c_out(c3));
+full_adder full_adder4(.a(a[3]), .b(b[3]), .c_in(c3), .s(s[3]), .c_out(c_out));
+
+endmodule
