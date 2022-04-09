@@ -30,6 +30,55 @@ module AND_test ();
     end
 endmodule
 
+module AND3_test ();
+    
+    reg a;
+    reg b;
+    reg c;
+
+    wire d;
+    and3_gate hello(.i_1(a), .i_2(b),.i_3(c), .o(d));
+    
+    initial begin
+    //$dumpfile("test.vcd");
+    //$dumpvars(0,AND_test);
+        a = 0;
+        b = 0;
+        c = 0;
+        #10;
+        a = 0;
+        b = 0;
+        c = 1;
+        #10;
+        a = 0;
+        b = 1;
+        c = 0;
+        #10;
+        a = 0;
+        b = 1;
+        c = 1;
+        #10;
+        a = 1;
+        b = 0;
+        c = 0;
+        #10;
+        a = 1;
+        b = 0;
+        c = 1;
+        #10;
+        a = 1;
+        b = 1;
+        c = 0;
+        #10;
+        a = 1;
+        b = 1;
+        c = 1;
+        #10;
+        //$finish;
+    end
+endmodule
+
+
 module OR_test();
 
     reg a;
