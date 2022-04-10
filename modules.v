@@ -102,6 +102,7 @@ module mux2_1(input i_1, i_2, s_1, output o);
 wire temp1, temp2, temp3;
 
 not_gate not1(.i_1(s_1), .o(temp2));
+
 and_gate and1(.i_1(i_2), .i_2(s_1), .o(temp1));
 and_gate and2(.i_1(temp2), .i_2(i_1), .o(temp3));
 or_gate or1(.i_1(temp1), .i_2(temp3), .o(o));
@@ -118,11 +119,11 @@ mux2_1 mux2_1_12(.i_1(temp1), .i_2(temp2), .s_1(s_2), .o(o));
 endmodule
 
 module mux8_1(input i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, s_1, s_2, s_3, output o);
-wire temp1, temp2, temp3, temp4, temp5, temp6, temp7, temp8;
+wire temp1, temp2;
 
-mux4_1 mux4_1_1(.i_1(i_1), .i_2(i_2), .i_3(i_3), .i_4(i_4), .s_1(s_1), .s_2(s_2), .o(temp1));
-mux4_1 mux4_1_2(.i_1(i_5), .i_2(i_6), .i_3(i_7), .i_4(i_8), .s_1(s_1), .s_2(s_2), .o(temp2));
-mux2_1 mux2_1_1(.i_1(temp1), .i_2(temp2), .s_1(s_3), .o(temp3));
+mux4_1 mux4_1_1(.i_1(i_1), .i_2(i_2), .i_3(i_3), .i_4(i_4), .s_1(s_2), .s_2(s_1), .o(temp1));
+mux4_1 mux4_1_2(.i_1(i_5), .i_2(i_6), .i_3(i_7), .i_4(i_8), .s_1(s_2), .s_2(s_1), .o(temp2));
+mux2_1 mux2_1_1(.i_1(temp1), .i_2(temp2), .s_1(s_3), .o(o));
 
 endmodule
 
