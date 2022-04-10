@@ -983,43 +983,35 @@ module Sixteen_b_full_adder_test();
     wire c_out;
     wire [15:0] s;
 
-    Sixteen_b_full_adder test(.a(a[15:0]), .b(b[15:0]), .X(X) .s(s[15:0]), .c_out(c_out));
+    Sixteen_b_full_adder test(.a(a[15:0]), .b(b[15:0]), .X(X), .s(s[15:0]), .c_out(c_out));
 
     initial begin
     $dumpfile("sixteen.vcd");
     $dumpvars(0,Sixteen_b_full_adder_test);
-        x = 0;
+        X = 0;
         a = 16'd23;
         b = 16'd3;
-        c_in = 0;
         #10;
         a = 16'd21;
         b = 16'd75;
-        c_in = 0;
         #10;
         a = 16'd16800;
         b = 16'd16900;
-        c_in = 0;
         #10;
         a = 16'd69834;
         b = 16'd66500;
-        c_in = 0;
         #10;
         a = 16'd325;
         b = 16'd97;
-        c_in = 0;
         #10;
         a = 16'd44;
         b = 16'd190;
-        c_in = 0;
         #10;
         a = 16'd463;
         b = 16'd241;
-        c_in = 0;
         #10;
         a = 16'd86;
         b = 16'd572;
-        c_in = 0;
         #10;
         $finish;
     end
