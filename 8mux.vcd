@@ -1,0 +1,511 @@
+$date
+	Sun Apr 10 17:22:14 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mux8_1_test $end
+$var wire 1 ! out $end
+$var reg 1 " a_0 $end
+$var reg 1 # a_1 $end
+$var reg 1 $ a_2 $end
+$var reg 1 % a_3 $end
+$var reg 1 & a_4 $end
+$var reg 1 ' a_5 $end
+$var reg 1 ( a_6 $end
+$var reg 1 ) a_7 $end
+$var reg 1 * s_0 $end
+$var reg 1 + s_1 $end
+$var reg 1 , s_2 $end
+$scope module test $end
+$var wire 1 ) i_1 $end
+$var wire 1 ( i_2 $end
+$var wire 1 ' i_3 $end
+$var wire 1 & i_4 $end
+$var wire 1 % i_5 $end
+$var wire 1 $ i_6 $end
+$var wire 1 # i_7 $end
+$var wire 1 " i_8 $end
+$var wire 1 * s_1 $end
+$var wire 1 + s_2 $end
+$var wire 1 , s_3 $end
+$var wire 1 - temp2 $end
+$var wire 1 . temp1 $end
+$var wire 1 ! o $end
+$scope module mux2_1_1 $end
+$var wire 1 , s_1 $end
+$var wire 1 / temp3 $end
+$var wire 1 0 temp2 $end
+$var wire 1 1 temp1 $end
+$var wire 1 ! o $end
+$var wire 1 - i_2 $end
+$var wire 1 . i_1 $end
+$scope module and1 $end
+$var wire 1 , i_2 $end
+$var wire 1 1 o $end
+$var wire 1 - i_1 $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 / o $end
+$var wire 1 . i_2 $end
+$var wire 1 0 i_1 $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 , i_1 $end
+$var wire 1 0 o $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 1 i_1 $end
+$var wire 1 / i_2 $end
+$var wire 1 ! o $end
+$upscope $end
+$upscope $end
+$scope module mux4_1_1 $end
+$var wire 1 ) i_1 $end
+$var wire 1 ( i_2 $end
+$var wire 1 ' i_3 $end
+$var wire 1 & i_4 $end
+$var wire 1 + s_1 $end
+$var wire 1 * s_2 $end
+$var wire 1 2 temp2 $end
+$var wire 1 3 temp1 $end
+$var wire 1 . o $end
+$scope module mux2_1_1 $end
+$var wire 1 ) i_1 $end
+$var wire 1 ( i_2 $end
+$var wire 1 + s_1 $end
+$var wire 1 4 temp3 $end
+$var wire 1 5 temp2 $end
+$var wire 1 6 temp1 $end
+$var wire 1 3 o $end
+$scope module and1 $end
+$var wire 1 ( i_1 $end
+$var wire 1 + i_2 $end
+$var wire 1 6 o $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 ) i_2 $end
+$var wire 1 4 o $end
+$var wire 1 5 i_1 $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 + i_1 $end
+$var wire 1 5 o $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 6 i_1 $end
+$var wire 1 4 i_2 $end
+$var wire 1 3 o $end
+$upscope $end
+$upscope $end
+$scope module mux2_1_12 $end
+$var wire 1 3 i_1 $end
+$var wire 1 * s_1 $end
+$var wire 1 7 temp3 $end
+$var wire 1 8 temp2 $end
+$var wire 1 9 temp1 $end
+$var wire 1 . o $end
+$var wire 1 2 i_2 $end
+$scope module and1 $end
+$var wire 1 * i_2 $end
+$var wire 1 9 o $end
+$var wire 1 2 i_1 $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 3 i_2 $end
+$var wire 1 7 o $end
+$var wire 1 8 i_1 $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 * i_1 $end
+$var wire 1 8 o $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 9 i_1 $end
+$var wire 1 7 i_2 $end
+$var wire 1 . o $end
+$upscope $end
+$upscope $end
+$scope module mux2_1_2 $end
+$var wire 1 ' i_1 $end
+$var wire 1 & i_2 $end
+$var wire 1 + s_1 $end
+$var wire 1 : temp3 $end
+$var wire 1 ; temp2 $end
+$var wire 1 < temp1 $end
+$var wire 1 2 o $end
+$scope module and1 $end
+$var wire 1 & i_1 $end
+$var wire 1 + i_2 $end
+$var wire 1 < o $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 ' i_2 $end
+$var wire 1 : o $end
+$var wire 1 ; i_1 $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 + i_1 $end
+$var wire 1 ; o $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 < i_1 $end
+$var wire 1 : i_2 $end
+$var wire 1 2 o $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module mux4_1_2 $end
+$var wire 1 % i_1 $end
+$var wire 1 $ i_2 $end
+$var wire 1 # i_3 $end
+$var wire 1 " i_4 $end
+$var wire 1 + s_1 $end
+$var wire 1 * s_2 $end
+$var wire 1 = temp2 $end
+$var wire 1 > temp1 $end
+$var wire 1 - o $end
+$scope module mux2_1_1 $end
+$var wire 1 % i_1 $end
+$var wire 1 $ i_2 $end
+$var wire 1 + s_1 $end
+$var wire 1 ? temp3 $end
+$var wire 1 @ temp2 $end
+$var wire 1 A temp1 $end
+$var wire 1 > o $end
+$scope module and1 $end
+$var wire 1 $ i_1 $end
+$var wire 1 + i_2 $end
+$var wire 1 A o $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 % i_2 $end
+$var wire 1 ? o $end
+$var wire 1 @ i_1 $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 + i_1 $end
+$var wire 1 @ o $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 A i_1 $end
+$var wire 1 ? i_2 $end
+$var wire 1 > o $end
+$upscope $end
+$upscope $end
+$scope module mux2_1_12 $end
+$var wire 1 > i_1 $end
+$var wire 1 * s_1 $end
+$var wire 1 B temp3 $end
+$var wire 1 C temp2 $end
+$var wire 1 D temp1 $end
+$var wire 1 - o $end
+$var wire 1 = i_2 $end
+$scope module and1 $end
+$var wire 1 * i_2 $end
+$var wire 1 D o $end
+$var wire 1 = i_1 $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 > i_2 $end
+$var wire 1 B o $end
+$var wire 1 C i_1 $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 * i_1 $end
+$var wire 1 C o $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 D i_1 $end
+$var wire 1 B i_2 $end
+$var wire 1 - o $end
+$upscope $end
+$upscope $end
+$scope module mux2_1_2 $end
+$var wire 1 # i_1 $end
+$var wire 1 " i_2 $end
+$var wire 1 + s_1 $end
+$var wire 1 E temp3 $end
+$var wire 1 F temp2 $end
+$var wire 1 G temp1 $end
+$var wire 1 = o $end
+$scope module and1 $end
+$var wire 1 " i_1 $end
+$var wire 1 + i_2 $end
+$var wire 1 G o $end
+$upscope $end
+$scope module and2 $end
+$var wire 1 # i_2 $end
+$var wire 1 E o $end
+$var wire 1 F i_1 $end
+$upscope $end
+$scope module not1 $end
+$var wire 1 + i_1 $end
+$var wire 1 F o $end
+$upscope $end
+$scope module or1 $end
+$var wire 1 G i_1 $end
+$var wire 1 E i_2 $end
+$var wire 1 = o $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0G
+1F
+0E
+0D
+1C
+0B
+0A
+1@
+0?
+0>
+0=
+0<
+1;
+0:
+09
+18
+07
+06
+15
+04
+03
+02
+01
+10
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10000
+1!
+11
+1-
+1B
+12
+1>
+00
+1:
+1?
+1,
+1'
+1%
+#20000
+1(
+1$
+#30000
+0!
+02
+01
+10
+0:
+0,
+0(
+0'
+#40000
+0-
+0B
+0!
+0>
+0=
+01
+00
+05
+0;
+0@
+0F
+0?
+0E
+1,
+1+
+0%
+0$
+1#
+#50000
+1.
+17
+13
+16
+1(
+1%
+#60000
+1-
+1!
+1B
+1/
+12
+1>
+10
+1<
+1A
+0,
+1&
+0%
+1$
+#70000
+0!
+0.
+0-
+0/
+07
+0B
+02
+01
+00
+09
+08
+0C
+0<
+1,
+1*
+0&
+1%
+#80000
+1.
+19
+12
+14
+1:
+13
+0>
+15
+1;
+1@
+1F
+06
+0A
+0+
+1)
+0(
+1'
+1&
+0%
+0$
+0#
+#90000
+1!
+1/
+10
+0,
+0&
+1"
+#100000
+1>
+1?
+1(
+1&
+1%
+1$
+#110000
+0.
+0!
+09
+0/
+02
+00
+0:
+1,
+0'
+0&
+#120000
+1!
+11
+1.
+1-
+0>
+19
+1D
+0?
+12
+1=
+16
+05
+0;
+0@
+1G
+0F
+04
+1<
+0E
+1+
+0)
+1&
+0$
+1#
+#130000
+0!
+0.
+09
+0/
+02
+1>
+01
+10
+0<
+1A
+0,
+0&
+0%
+1$
+#140000
+1!
+1/
+1.
+19
+03
+12
+06
+1<
+0(
+1&
+#150000
+0.
+09
+0/
+13
+02
+0>
+11
+00
+16
+0<
+0A
+1,
+1)
+1(
+0&
+0$
+#160000
+1.
+19
+03
+12
+06
+1<
+0(
+1'
+1&
+1%
+0#
+#170000

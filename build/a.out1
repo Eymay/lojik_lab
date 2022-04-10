@@ -3727,12 +3727,9 @@
 **** module/scope: F2_F3.decoder3_8_1.not1
      Flip-Flops   : 0
      Logic Gates  : 1
-**** module/scope: F2_F3.or1
-     Flip-Flops   : 0
-     Logic Gates  : 1
 **** TOTALS
      Flip-Flops   : 0
-     Logic Gates  : 24
+     Logic Gates  : 23
 **** module/scope: Four_b_full_adder
      Flip-Flops   : 0
      Logic Gates  : 0
