@@ -1,4 +1,5 @@
 `timescale 1ns/1ps
+`include "modules.v"
 module AND_test ();
     
     reg a;
@@ -25,7 +26,7 @@ module AND_test ();
         a = 1;
         b = 1;
         #10;
-        //$finish;
+        ////$finish;
     end
 endmodule
 
@@ -73,7 +74,7 @@ module AND3_test ();
         b = 1;
         c = 1;
         #10;
-        //$finish;
+        ////$finish;
     end
 endmodule
 
@@ -170,7 +171,7 @@ module AND4_test ();
         c = 1;
         d = 1;
         #10;
-        $finish;
+        //$finish;
     end
 endmodule
 
@@ -201,7 +202,7 @@ module OR_test();
             a = 1;
             b = 1;
             #10;
-            $finish;
+            //$finish;
         end
 endmodule
      
@@ -249,7 +250,7 @@ module OR3_test ();
              b = 1;
              c = 1;
              #10;
-             $finish;
+             //$finish;
          end
  endmodule
      
@@ -266,7 +267,7 @@ module not_test();
         #10;
         a = 1;
         #10;
-        $finish;
+        //$finish;
         end
 endmodule        
 
@@ -297,7 +298,7 @@ module xor_test();
             a = 1;
             b = 1;
             #10;
-            $finish;
+            //$finish;
         end
 endmodule         
      
@@ -328,7 +329,7 @@ module nand_test();
                 a = 1;
                 b = 1;
                 #10;
-                $finish;
+                //$finish;
             end
 endmodule
 
@@ -376,7 +377,7 @@ module nand3_test();
             b = 1;
             c = 1;
             #10;
-            $finish;
+            //$finish;
         end
 endmodule
     
@@ -411,7 +412,7 @@ module mux2_1_test();
                 b = 1;
                 s = 1;
                 #10;
-                //$finish;
+                ////$finish;
             end
 endmodule            
 
@@ -543,7 +544,7 @@ module mux4_1_test();
             s1 = 0;
             s2 = 1;
             #10;
-            //$finish;
+            ////$finish;
         end
 endmodule
 
@@ -586,7 +587,7 @@ module mux8_1_test();
         a_0 = 1; a_1 = 1; a_2 = 1; a_3 = 0; a_4 = 1; a_5 = 0; a_6 = 0; a_7 = 0; s_0 = 1; s_1 = 1; s_2 = 0; #10; 
         a_0 = 1; a_1 = 1; a_2 = 0; a_3 = 0; a_4 = 0; a_5 = 0; a_6 = 1; a_7 = 1; s_0 = 1; s_1 = 1; s_2 = 1; #10; 
         a_0 = 1; a_1 = 0; a_2 = 0; a_3 = 1; a_4 = 1; a_5 = 1; a_6 = 0; a_7 = 1; s_0 = 1; s_1 = 1; s_2 = 1; #10; 
-        $finish;
+        //$finish;
         end
 endmodule 
          
@@ -628,7 +629,7 @@ module decoder2_4_test();
            b = 1;
            c = 1;
            #10;
-           $finish;
+           //$finish;
        end
 endmodule    
 
@@ -683,7 +684,7 @@ module decoder3_8_test();
            b = 1;
            c = 1;
            #10;
-           $finish;
+           //$finish;
        end
 endmodule
 
@@ -717,7 +718,7 @@ module F1_d_test();
             a = 1; b = 1;  c = 0; d = 1;#10;
             a = 1; b = 1;  c = 1; d = 0;#10;
             a = 1; b = 1;  c = 1; d = 1;#10;
-             $finish;  
+             //$finish;  
            end
 endmodule
 
@@ -752,7 +753,7 @@ module F1_e_test();
              a = 1; b = 1;  c = 0; d = 1;#10;
              a = 1; b = 1;  c = 1; d = 0;#10;
              a = 1; b = 1;  c = 1; d = 1;#10;  
-            $finish;
+            //$finish;
             end
 endmodule
 
@@ -802,7 +803,7 @@ module F2_F3_test ();
         b = 1;
         c = 1;
         #10;
-        $finish;
+        //$finish;
     end
 endmodule
 
@@ -828,7 +829,7 @@ module half_adder_test();
             a = 1;
             b = 1;
             #10;
-        $finish;
+        //$finish;
     end
 endmodule
 
@@ -876,7 +877,7 @@ module full_adder_test();
         b = 1;
         c_in = 1;
         #10;
-        $finish;
+        //$finish;
     end
 endmodule
 
@@ -923,7 +924,7 @@ module Four_b_full_adder_test();
         b = 4'd12;
         c_in = 0;
         #10;
-        $finish;
+        //$finish;
     end
 endmodule
 
@@ -970,7 +971,7 @@ module Eight_b_full_adder_test();
         b = 8'd59;
         c_in = 0;
         #10;
-        $finish;
+        //$finish;
     end
 endmodule
 
@@ -1019,7 +1020,7 @@ module Sixteen_b_full_adder_test();
         
         #10;
        
-        $finish;
+        //$finish;
     end
 endmodule
 
@@ -1033,6 +1034,8 @@ module BA_test();
     BA test(.A(a), .B(b), .s(s), .c_out(c_o));
     
     initial begin
+    $dumpfile("BA.vcd");
+    $dumpvars(0,BA_test);
         a = 16'd32; b =16'd7; #10;
         a = 16'd21; b =16'd85; #10;
         a = 16'd16; b =16'd36; #10;
