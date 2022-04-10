@@ -301,7 +301,7 @@ module BA(input [15:0] A,
                      output c_out);
 wire [15:0] int_sum1, int_sum2;
 wire int_c, borrow;
-//B - A - A yapılıyor, eğer ilk B - A işleminde borrow varsa diğerine geçmeden önce o çıkarılıyor 
+//B - A - A yap�l�yor, eger ilk B - A isleminde borrow varsa digerine gecmeden once o çıkarılıyor 
 Sixteen_b_full_adder Sixteen_b_full_adder1(.a(B[15:0]), .b(A[15:0]), .X(1'b1), .s(int_sum1[15:0]), .c_out(int_c));
 not_gate not1(.i_1(int_c), .o(borrow));
 Sixteen_b_full_adder Sixteen_b_full_adder2(.a(B[15:0]), .b(borrow), .X(1'b1), .s(int_sum2[15:0]), .c_out(c_out));

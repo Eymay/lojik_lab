@@ -1,5 +1,4 @@
 `timescale 1ns/1ps
-`include "modules.v"
 module AND_test ();
     
     reg a;
@@ -924,6 +923,7 @@ module Four_b_full_adder_test();
         b = 4'd12;
         c_in = 0;
         #10;
+        $finish;
     end
 endmodule
 
@@ -970,6 +970,7 @@ module Eight_b_full_adder_test();
         b = 8'd59;
         c_in = 0;
         #10;
+        $finish;
     end
 endmodule
 
@@ -983,11 +984,14 @@ module Sixteen_b_full_adder_test();
     wire c_out;
     wire [15:0] s;
 
+
     Sixteen_b_full_adder test(.a(a[15:0]), .b(b[15:0]), .X(X), .s(s[15:0]), .c_out(c_out));
 
+
+
     initial begin
-    $dumpfile("sixteen.vcd");
-    $dumpvars(0,Sixteen_b_full_adder_test);
+    //$dumpfile("sixteen.vcd");
+    //$dumpvars(0,Sixteen_b_full_adder_test);
         X = 0;
         a = 16'd23;
         b = 16'd3;
@@ -1012,9 +1016,33 @@ module Sixteen_b_full_adder_test();
         #10;
         a = 16'd86;
         b = 16'd572;
+        
         #10;
+       
         $finish;
     end
+endmodule
+
+module BA_test();
+
+    reg [15:0] a,b;
+    
+    wire [15:0] s;
+    wire c_o;
+    
+    BA test(.A(a), .B(b), .s(s), .c_out(c_o));
+    
+    initial begin
+        a = 16'd32; b =16'd7; #10;
+        a = 16'd21; b =16'd85; #10;
+        a = 16'd16; b =16'd36; #10;
+        a = 16'd256; b =16'd5; #10;
+        a = 16'd200; b =16'd95; #10;
+        a = 16'd45; b =16'd135; #10;
+        a = 16'd36; b =16'd255; #10;
+        a = 16'd25; b =16'd65; #10;
+        $finish;
+        end
 endmodule
 
 
