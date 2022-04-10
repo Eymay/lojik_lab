@@ -132,7 +132,7 @@ module decoder2_4(input i_1, i_2, en,  output o_1, o_2,  o_3,  o_4);
 wire temp1, temp2;
 not_gate not1(.i_1(i_1), .o(temp1));
 not_gate not2(.i_1(i_2), .o(temp2));
-and3_gate and3_1(.i_1(i_1), .i_2(i_2), .i_3(en), .o(o_4));
+and3_gate and3_1(.i_1(i_1), .i_2(i_2), .i_3(en), .o(o_4)); //most significant bit
 and3_gate and3_2(.i_1(temp1), .i_2(i_2), .i_3(en), .o(o_2));
 and3_gate and3_3(.i_1(i_1), .i_2(temp2), .i_3(en), .o(o_3));
 and3_gate and3_4(.i_1(temp1), .i_2(temp2), .i_3(en), .o(o_1));
@@ -142,8 +142,8 @@ endmodule
 module decoder3_8(input i_1, i_2, i_3,  output o_1, output o_2, output o_3, output o_4, output o_5, output o_6, output o_7, output o_8);
 wire temp1;
 not_gate not1(.i_1(i_3), .o(temp1));
-decoder2_4 decoder2_4_1(.i_1(i_1), .i_2(i_2), .en(i_3), .o_1(o_1), .o_2(o_2), .o_3(o_3), .o_4(o_4));
-decoder2_4 decoder2_4_2(.i_1(i_1), .i_2(i_2), .en(temp1), .o_1(o_5), .o_2(o_6), .o_3(o_7), .o_4(o_8));
+decoder2_4 decoder2_4_1(.i_1(i_1), .i_2(i_2), .en(i_3), .o_1(o_2), .o_2(o_4), .o_3(o_6), .o_4(o_8));
+decoder2_4 decoder2_4_2(.i_1(i_1), .i_2(i_2), .en(temp1), .o_1(o_1), .o_2(o_3), .o_3(o_5), .o_4(o_7));
 endmodule
 
 //PART 2

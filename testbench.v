@@ -629,7 +629,7 @@ module decoder2_4_test();
            b = 1;
            c = 1;
            #10;
-           //$finish;
+           $finish;
        end
 endmodule    
 
@@ -654,7 +654,7 @@ module decoder3_8_test();
        //$dumpvars(0,AND_test);
            a = 0;
            b = 0;
-           c = 1;
+           c = 0;
            #10;
            a = 0;
            b = 0;
@@ -670,7 +670,7 @@ module decoder3_8_test();
            #10;
            a = 1;
            b = 0;
-           c = 1;
+           c = 0;
            #10;
            a = 1;
            b = 0;
@@ -678,13 +678,13 @@ module decoder3_8_test();
            #10;
            a = 1;
            b = 1;
-           c = 1;
+           c = 0;
            #10;
            a = 1;
            b = 1;
            c = 1;
            #10;
-           //$finish;
+           $finish;
        end
 endmodule
 
@@ -734,7 +734,7 @@ module F1_d_test();
                b = 1;
                c = 1;
                #10;
-               //$finish;
+               $finish;
            end
 endmodule
 
@@ -785,7 +785,7 @@ module F1_e_test();
                b = 1;
                c = 1;
                #10;
-               //$finish;
+               $finish;
            end
 endmodule
 
@@ -833,7 +833,7 @@ module F2_F3_test ();
         b = 1;
         c = 1;
         #10;
-        //$finish;
+        $finish;
     end
 endmodule
 
@@ -849,7 +849,7 @@ module half_adder_test();
     
     initial begin
     
-        //$finish;
+        $finish;
     end
 endmodule
 
