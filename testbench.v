@@ -384,27 +384,33 @@ endmodule
 module mux2_1_test();
     reg a;
     reg b;
+    reg s;
     
     wire c;
     
-    mux2_1 hello(.i_1(a), .i_2(b), .o(c));
-    initial begin
+    mux2_1 hello(.i_1(a), .i_2(b), .s_1(s), .o(c));
+    initial begin 
             //$dumpfile("test.vcd");
             //$dumpvars(0,AND_test);
                 a = 1;
                 b = 1;
+                s = 0;
                 #10;
                 a = 0;
                 b = 0;
+                s = 1;
                 #10;
                 a = 1;
                 b = 0;
+                s = 0;
                 #10;
                 a = 0;
                 b = 1;
+                s = 1;
                 #10;
                 a = 1;
                 b = 1;
+                s = 1;
                 #10;
                 $finish;
             end
@@ -419,7 +425,7 @@ module mux4_1_test();
     reg s1;
     reg s2;
     
-    reg e;
+    wire e;
     
     mux4_1 hello(.i_1(a), .i_2(b), .i_3(c), .i_4(d), .s_1(s1), .s_2(s2), .o(e));
     

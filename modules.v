@@ -101,7 +101,7 @@ endmodule
 module mux2_1(input i_1, i_2, s_1, output o);
 wire temp1, temp2, temp3;
 
-not_gate not1(.i_1(i_1), .o(temp2));
+not_gate not1(.i_1(s_1), .o(temp2));
 and_gate and1(.i_1(i_2), .i_2(s_1), .o(temp1));
 and_gate and2(.i_1(temp2), .i_2(i_1), .o(temp3));
 or_gate or1(.i_1(temp1), .i_2(temp3), .o(o));
