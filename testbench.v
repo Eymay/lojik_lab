@@ -1,5 +1,4 @@
 `timescale 1ns/1ps
-//`include "modules.v"
 module AND_test ();
     
     reg a;
@@ -978,46 +977,42 @@ endmodule
 
 module Sixteen_b_full_adder_test();
     
-    reg [3:0] a, b;
-    reg c_in;
+    reg [15:0] a, b;
+    reg X;
+
 
     wire c_out;
-    wire [3:0] s;
+    wire [15:0] s;
 
-    Sixteen_b_full_adder test(.a(a), .b(b), .s(s), .c_out(c_out));
+    Sixteen_b_full_adder test(.a(a[15:0]), .b(b[15:0]), .X(X), .s(s[15:0]), .c_out(c_out));
 
     initial begin
+    $dumpfile("sixteen.vcd");
+    $dumpvars(0,Sixteen_b_full_adder_test);
+        X = 0;
         a = 16'd23;
         b = 16'd3;
-        
         #10;
         a = 16'd21;
         b = 16'd75;
-        
         #10;
         a = 16'd16800;
         b = 16'd16900;
-        
         #10;
         a = 16'd69834;
         b = 16'd66500;
-        
         #10;
         a = 16'd325;
         b = 16'd97;
-        
         #10;
         a = 16'd44;
         b = 16'd190;
-        
         #10;
         a = 16'd463;
         b = 16'd241;
-        
         #10;
         a = 16'd86;
         b = 16'd572;
-        
         #10;
         $finish;
     end
