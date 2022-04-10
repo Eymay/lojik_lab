@@ -815,7 +815,7 @@ module half_adder_test();
     wire c;
     wire s;
     
-    half_adder_test(.a(a), .b(b), .s(s), .c(c));
+    half_adder  test(.a(a), .b(b), .s(s), .c(c));
     initial begin
             a = 0;
             b = 0;
@@ -842,7 +842,7 @@ module full_adder_test();
     wire c_out;
     wire s;
     
-    full_adder_test(.a(a), .b(b), .c_in(c_in), .s(s), .c_out(c_out));
+    full_adder test(.a(a), .b(b), .c_in(c_in), .s(s), .c_out(c_out));
 
     initial begin
         a = 0;
@@ -876,6 +876,7 @@ module full_adder_test();
         a = 1;
         b = 1;
         c_in = 1;
+        #10;
         $finish;
     end
 endmodule
@@ -888,7 +889,7 @@ module Four_b_full_adder_test();
     wire c_out;
     wire [3:0] s;
 
-    Four_b_full_adder_test(.a(a), .b(b), .c_in(c_in), .s(s), .c_out(c_out));
+    Four_b_full_adder test(.a(a), .b(b), .c_in(c_in), .s(s), .c_out(c_out));
 
     initial begin
         a = 4'd8;
@@ -915,7 +916,7 @@ module Four_b_full_adder_test();
         b = 4'd9;
         c_in = 0;
         #10;
-        a = 4'd6;
+        a = 4'd2;
         b = 4'd3;
         c_in = 0;
         #10;
@@ -923,7 +924,9 @@ module Four_b_full_adder_test();
         b = 4'd12;
         c_in = 0;
         #10;
+        $finish;
     end
+endmodule
 
 module Eight_b_full_adder_test();
     
@@ -933,7 +936,7 @@ module Eight_b_full_adder_test();
     wire c_out;
     wire [7:0] s;
 
-    Four_b_full_adder_test(.a(a), .b(b), .c_in(c_in), .s(s), .c_out(c_out));
+    Eight_b_full_adder test(.a(a), .b(b), .c_in(c_in), .s(s), .c_out(c_out));
 
     initial begin
         a = 8'd29;
@@ -968,53 +971,57 @@ module Eight_b_full_adder_test();
         b = 8'd59;
         c_in = 0;
         #10;
+        $finish;
     end
+endmodule
 
-module Four_b_full_adder_test();
+
+module Sixteen_b_full_adder_test();
     
-    reg [3:0] a, b;
+    reg [15:0] a, b;
     reg c_in;
 
     wire c_out;
-    wire [3:0] s;
+    wire [15:0] s;
 
-    Four_b_full_adder_test(.a(a), .b(b), .c_in(c_in), .s(s), .c_out(c_out));
+    Sixteen_b_full_adder test(.a(a), .b(b), .c_in(c_in), .s(s), .c_out(c_out));
 
     initial begin
-        a = 4'd8;
-        b = 4'd1;
+        a = 16'd8;
+        b = 16'd1;
         c_in = 0;
         #10;
-        a = 4'd2;
-        b = 4'd7;
+        a = 16'd22;
+        b = 16'd77;
         c_in = 0;
         #10;
-        a = 4'd4;
-        b = 4'd5;
+        a = 16'd14;
+        b = 16'd58;
         c_in = 0;
         #10;
-        a = 4'd11;
-        b = 4'd10;
+        a = 16'd141;
+        b = 16'd103;
         c_in = 0;
         #10;
-        a = 4'd14;
-        b = 4'd5;
+        a = 16'd1544;
+        b = 16'd4565;
         c_in = 0;
         #10;
-        a = 4'd15;
-        b = 4'd9;
+        a = 16'd1235;
+        b = 16'd245;
         c_in = 0;
         #10;
-        a = 4'd6;
-        b = 4'd3;
+        a = 16'd6452;
+        b = 16'd3120;
         c_in = 0;
         #10;
-        a = 4'd8;
-        b = 4'd12;
+        a = 16'd812;
+        b = 16'd1452;
         c_in = 0;
         #10;
+        $finish;
     end
-
+endmodule
 
 
 
