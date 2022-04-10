@@ -171,7 +171,7 @@ module AND4_test ();
         c = 1;
         d = 1;
         #10;
-        //$finish;
+        $finish;
     end
 endmodule
 
@@ -202,7 +202,7 @@ module OR_test();
             a = 1;
             b = 1;
             #10;
-            //$finish;
+            $finish;
         end
 endmodule
      
@@ -250,7 +250,7 @@ module OR3_test ();
              b = 1;
              c = 1;
              #10;
-             //$finish;
+             $finish;
          end
  endmodule
      
@@ -267,7 +267,7 @@ module not_test();
         #10;
         a = 1;
         #10;
-        //$finish;
+        $finish;
         end
 endmodule        
 
@@ -298,7 +298,7 @@ module xor_test();
             a = 1;
             b = 1;
             #10;
-            //$finish;
+            $finish;
         end
 endmodule         
      
@@ -329,7 +329,7 @@ module nand_test();
                 a = 1;
                 b = 1;
                 #10;
-                //$finish;
+                $finish;
             end
 endmodule
 
@@ -377,7 +377,7 @@ module nand3_test();
             b = 1;
             c = 1;
             #10;
-            //$finish;
+            $finish;
         end
 endmodule
     
@@ -701,40 +701,24 @@ module F1_d_test();
     
     initial begin
            //$dumpfile("test.vcd");
-           //$dumpvars(0,AND_test);
-               a = 0;
-               b = 0;
-               c = 0;
-               #10;
-               a = 0;
-               b = 0;
-               c = 1;
-               #10;
-               a = 0;
-               b = 1;
-               c = 0;
-               #10;
-               a = 0;
-               b = 1;
-               c = 1;
-               #10;
-               a = 1;
-               b = 0;
-               c = 0;
-               #10;
-               a = 1;
-               b = 0;
-               c = 1;
-               #10;
-               a = 1;
-               b = 1;
-               c = 0;
-               #10;
-               a = 1;
-               b = 1;
-               c = 1;
-               #10;
-               $finish;
+           //$dumpvars(0,AND_test);                              
+            a = 0; b = 0;  c = 0; d = 0;#10;
+            a = 0; b = 0;  c = 0; d = 1;#10;
+            a = 0; b = 0;  c = 1; d = 0;#10;
+            a = 0; b = 0;  c = 1; d = 1;#10;
+            a = 0; b = 1;  c = 0; d = 0;#10;
+            a = 0; b = 1;  c = 0; d = 1;#10;
+            a = 0; b = 1;  c = 1; d = 0;#10;
+            a = 0; b = 1;  c = 1; d = 1;#10;
+            a = 1; b = 0;  c = 0; d = 0;#10;
+            a = 1; b = 0;  c = 0; d = 1;#10;
+            a = 1; b = 0;  c = 1; d = 0;#10;
+            a = 1; b = 0;  c = 1; d = 1;#10;
+            a = 1; b = 1;  c = 0; d = 0;#10;
+            a = 1; b = 1;  c = 0; d = 1;#10;
+            a = 1; b = 1;  c = 1; d = 0;#10;
+            a = 1; b = 1;  c = 1; d = 1;#10;
+             $finish;  
            end
 endmodule
 
@@ -753,40 +737,24 @@ module F1_e_test();
     initial begin
            //$dumpfile("test.vcd");
            //$dumpvars(0,AND_test);
-               a = 0;
-               b = 0;
-               c = 0;
-               #10;
-               a = 0;
-               b = 0;
-               c = 1;
-               #10;
-               a = 0;
-               b = 1;
-               c = 0;
-               #10;
-               a = 0;
-               b = 1;
-               c = 1;
-               #10;
-               a = 1;
-               b = 0;
-               c = 0;
-               #10;
-               a = 1;
-               b = 0;
-               c = 1;
-               #10;
-               a = 1;
-               b = 1;
-               c = 0;
-               #10;
-               a = 1;
-               b = 1;
-               c = 1;
-               #10;
-               $finish;
-           end
+             a = 0; b = 0;  c = 0; d = 0;#10;
+             a = 0; b = 0;  c = 0; d = 1;#10;
+             a = 0; b = 0;  c = 1; d = 0;#10;
+             a = 0; b = 0;  c = 1; d = 1;#10;
+             a = 0; b = 1;  c = 0; d = 0;#10;
+             a = 0; b = 1;  c = 0; d = 1;#10;
+             a = 0; b = 1;  c = 1; d = 0;#10;
+             a = 0; b = 1;  c = 1; d = 1;#10;
+             a = 1; b = 0;  c = 0; d = 0;#10;
+             a = 1; b = 0;  c = 0; d = 1;#10;
+             a = 1; b = 0;  c = 1; d = 0;#10;
+             a = 1; b = 0;  c = 1; d = 1;#10;
+             a = 1; b = 1;  c = 0; d = 0;#10;
+             a = 1; b = 1;  c = 0; d = 1;#10;
+             a = 1; b = 1;  c = 1; d = 0;#10;
+             a = 1; b = 1;  c = 1; d = 1;#10;  
+            $finish;
+            end
 endmodule
 
 module F2_F3_test ();
@@ -795,8 +763,10 @@ module F2_F3_test ();
     reg b;
     reg c;
 
-    wire d;
-    F2_F3 hello(.a(a), .b(b),.c(c), .o(d));
+    wire f_1;
+    wire f_2;
+    
+    F2_F3 hello(.a(a), .b(b),.c(c), .o_1(f_1), .o_2(f_2));
     
     initial begin
     //$dumpfile("test.vcd");

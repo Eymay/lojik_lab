@@ -188,16 +188,15 @@ endmodule
 
 //PART 5
 
-module F2_F3(input a, b, c, output o);
+module F2_F3(input a, b, c, output o_1,o_2);
 wire l1_1, l1_2, l1_3, l1_4, l1_5;
 wire l2;
 
-decoder3_8 decoder3_8_1(.i_1(a), .i_2(b), .i_3(c), .o_1(l1_1), .o_4(l1_2), .o_6(l1_3), .o_7(l1_4), .o_8(l1_5));
+decoder3_8 decoder3_8_1(.i_1(a), .i_2(b), .i_3(c), .o_4(l1_1), .o_6(l1_2), .o_7(l1_3), .o_8(l1_4));
 
-or_gate or1(.i_1(l1_1), .i_2(l1_5), .o(l2));
 
-or_gate F1(.i_1(l1_2), .i_2(l1_3), .o(o));
-or_gate F2(.i_1(l1_4), .i_2(l2), .o(o));
+or_gate F1(.i_1(l1_1), .i_2(l1_2), .o(o_1));
+or_gate F2(.i_1(l1_3), .i_2(l1_4), .o(o_2));
 
 endmodule
 
