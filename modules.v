@@ -295,7 +295,7 @@ endmodule
 
 //PART 11
 
-module B-2A(input [15:0] A,
+module BA(input [15:0] A,
                      input [15:0] B,
                      output [15:0] s,
                      output c_out);
