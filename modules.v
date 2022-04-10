@@ -221,13 +221,14 @@ endmodule
 
 //PART 8
 
-module 4b_full_adder( a, b, c_in, s, c_out);
+module Four_b_full_adder(input [3:0] a,
+                     input [3:0] b,
+                     input c_in,
+                     output [3:0] s,
+                     output c_out);
 
-input wire a [3:0], b [3:0];
-input wire c_in;
+
 wire c1, c2, c3;
-output wire s [3:0] ;
-output wire c_out ;
 
 full_adder full_adder1(.a(a[0]), .b(b[0]), .c_in(c_in), .s(s[0]), .c_out(c1));
 full_adder full_adder2(.a(a[1]), .b(b[1]), .c_in(c1), .s(s[1]), .c_out(c2));
@@ -235,3 +236,6 @@ full_adder full_adder3(.a(a[2]), .b(b[2]), .c_in(c2), .s(s[2]), .c_out(c3));
 full_adder full_adder4(.a(a[3]), .b(b[3]), .c_in(c3), .s(s[3]), .c_out(c_out));
 
 endmodule
+
+//PART 9
+
