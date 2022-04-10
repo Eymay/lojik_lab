@@ -241,3 +241,55 @@ endmodule
 
 //PART 9
 
+module Eight_b_full_adder(input [7:0] a,
+                     input [7:0] b,
+                     input c_in,
+                     output [7:0] s,
+                     output c_out);
+
+wire c1, c2, c3, c4, c5, c6, c7;
+
+full_adder full_adder1(.a(a[0]), .b(b[0]), .c_in(c_in), .s(s[0]), .c_out(c1));
+full_adder full_adder2(.a(a[1]), .b(b[1]), .c_in(c1), .s(s[1]), .c_out(c2));
+full_adder full_adder3(.a(a[2]), .b(b[2]), .c_in(c2), .s(s[2]), .c_out(c3));
+full_adder full_adder4(.a(a[3]), .b(b[3]), .c_in(c3), .s(s[3]), .c_out(c4));
+full_adder full_adder5(.a(a[4]), .b(b[4]), .c_in(c4), .s(s[4]), .c_out(c5));
+full_adder full_adder6(.a(a[5]), .b(b[5]), .c_in(c5), .s(s[5]), .c_out(c6));
+full_adder full_adder7(.a(a[6]), .b(b[6]), .c_in(c6), .s(s[6]), .c_out(c7));
+full_adder full_adder8(.a(a[7]), .b(b[7]), .c_in(c7), .s(s[7]), .c_out(c_out));
+
+endmodule
+
+//PART 10
+
+module Sixteen_b_full_adder(input [15:0] a,
+                     input [15:0] b,
+                     input c_in,
+                     input X,
+                     output [15:0] s,
+                     output c_out);
+
+wire c1;
+wire [15:0] b_xor;
+
+xor_gate xor1(.i_1(X), .i_2(b[0]), .o(b_xor[0]));
+xor_gate xor2(.i_1(X), .i_2(b[1]), .o(b_xor[1]));
+xor_gate xor3(.i_1(X), .i_2(b[2]), .o(b_xor[2]));
+xor_gate xor4(.i_1(X), .i_2(b[3]), .o(b_xor[3]));
+xor_gate xor5(.i_1(X), .i_2(b[4]), .o(b_xor[4]));
+xor_gate xor6(.i_1(X), .i_2(b[5]), .o(b_xor[5]));
+xor_gate xor7(.i_1(X), .i_2(b[6]), .o(b_xor[6]));
+xor_gate xor8(.i_1(X), .i_2(b[7]), .o(b_xor[7]));
+xor_gate xor9(.i_1(X), .i_2(b[8]), .o(b_xor[8]));
+xor_gate xor10(.i_1(X), .i_2(b[9]), .o(b_xor[9]));
+xor_gate xor11(.i_1(X), .i_2(b[10]), .o(b_xor[10]));
+xor_gate xor12(.i_1(X), .i_2(b[11]), .o(b_xor[11]));
+xor_gate xor13(.i_1(X), .i_2(b[12]), .o(b_xor[12]));
+xor_gate xor14(.i_1(X), .i_2(b[13]), .o(b_xor[13]));
+xor_gate xor15(.i_1(X), .i_2(b[14]), .o(b_xor[14]));
+xor_gate xor16(.i_1(X), .i_2(b[15]), .o(b_xor[15]));
+
+Eight_b_full_adder Eight_b_full_adder1(.a(a[7:0]), .b(b_xor[7:0]), .c_in(X), .s(s[7:0]), .c_out(c1));
+Eight_b_full_adder Eight_b_full_adder2(.a(a[15:8]), .b(b_xor[15:8]), .c_in(c1), .s(s[15:8]), .c_out(c_out));
+
+endmodule

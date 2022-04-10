@@ -463,6 +463,1170 @@
 **** TOTALS
      Flip-Flops   : 0
      Logic Gates  : 52
+**** module/scope: Sixteen_b_full_adder
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder2.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder3.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder4.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder5.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder6.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder7.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder1.full_adder8.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder2.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder3.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder4.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder5.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder6.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder7.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder1.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder1.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder1.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder1.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder1.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder1.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder2.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder2.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder2.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder2.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder2.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.half_adder2.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.Eight_b_full_adder2.full_adder8.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor1
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor1.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor1.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor1.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor1.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor1.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor10
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor10.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor10.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor10.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor10.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor10.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor11
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor11.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor11.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor11.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor11.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor11.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor12
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor12.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor12.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor12.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor12.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor12.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor13
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor13.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor13.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor13.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor13.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor13.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor14
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor14.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor14.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor14.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor14.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor14.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor15
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor15.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor15.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor15.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor15.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor15.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor16
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor16.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor16.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor16.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor16.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor16.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor2
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor2.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor2.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor2.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor2.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor2.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor3
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor3.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor3.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor3.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor3.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor3.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor4
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor4.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor4.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor4.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor4.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor4.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor5
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor5.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor5.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor5.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor5.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor5.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor6
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor6.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor6.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor6.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor6.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor6.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor7
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor7.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor7.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor7.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor7.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor7.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor8
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor8.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor8.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor8.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor8.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor8.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor9
+     Flip-Flops   : 0
+     Logic Gates  : 0
+**** module/scope: Sixteen_b_full_adder.xor9.and1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor9.and2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor9.not1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor9.not2
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** module/scope: Sixteen_b_full_adder.xor9.or1
+     Flip-Flops   : 0
+     Logic Gates  : 1
+**** TOTALS
+     Flip-Flops   : 0
+     Logic Gates  : 288
 **** module/scope: and4_gate
      Flip-Flops   : 0
      Logic Gates  : 0
