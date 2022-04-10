@@ -264,7 +264,6 @@ endmodule
 
 module Sixteen_b_full_adder(input [15:0] a,
                      input [15:0] b,
-                     input c_in,
                      input X,
                      output [15:0] s,
                      output c_out);
@@ -291,5 +290,21 @@ xor_gate xor16(.i_1(X), .i_2(b[15]), .o(b_xor[15]));
 
 Eight_b_full_adder Eight_b_full_adder1(.a(a[7:0]), .b(b_xor[7:0]), .c_in(X), .s(s[7:0]), .c_out(c1));
 Eight_b_full_adder Eight_b_full_adder2(.a(a[15:8]), .b(b_xor[15:8]), .c_in(c1), .s(s[15:8]), .c_out(c_out));
+
+endmodule
+
+//PART 11
+
+module B-2A(input [15:0] A,
+                     input [15:0] B,
+                     output [15:0] s,
+                     output c_out);
+wire [15:0] int_sum1, int_sum2;
+wire int_c, borrow;
+//B - A - A yapılıyor, eğer ilk B - A işleminde borrow varsa diğerine geçmeden önce o çıkarılıyor 
+Sixteen_b_full_adder Sixteen_b_full_adder1(.a(B[15:0]), .b(A[15:0]), .X(1), .s(int_sum1[15:0]), .c_out(int_c));
+not_gate not1(.i(int_c), .o(borrow));
+Sixteen_b_full_adder Sixteen_b_full_adder2(.a(B[15:0]), .b(borrow), .X(1), .s(int_sum2[15:0]), .c_out(c_out));
+Sixteen_b_full_adder Sixteen_b_full_adder3(.a(int_sum2[15:0]), .b(A[15:0]), .X(1), .s(s[15:0]), .c_out(c_out));
 
 endmodule
