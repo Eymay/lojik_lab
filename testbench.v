@@ -916,7 +916,7 @@ module Four_b_full_adder_test();
         b = 4'd9;
         c_in = 0;
         #10;
-        a = 4'd2;
+        a = 4'd6;
         b = 4'd3;
         c_in = 0;
         #10;
@@ -924,7 +924,6 @@ module Four_b_full_adder_test();
         b = 4'd12;
         c_in = 0;
         #10;
-        $finish;
     end
 endmodule
 
@@ -971,55 +970,53 @@ module Eight_b_full_adder_test();
         b = 8'd59;
         c_in = 0;
         #10;
-        $finish;
     end
 endmodule
 
 
 module Sixteen_b_full_adder_test();
     
-    reg [15:0] a, b;
+    reg [3:0] a, b;
     reg c_in;
 
     wire c_out;
-    wire [15:0] s;
+    wire [3:0] s;
 
     Sixteen_b_full_adder test(.a(a), .b(b), .c_in(c_in), .s(s), .c_out(c_out));
 
     initial begin
-        a = 16'd8;
-        b = 16'd1;
+        a = 16'd23;
+        b = 16'd3;
         c_in = 0;
         #10;
-        a = 16'd22;
-        b = 16'd77;
+        a = 16'd21;
+        b = 16'd75;
         c_in = 0;
         #10;
-        a = 16'd14;
-        b = 16'd58;
+        a = 16'd16800;
+        b = 16'd16900;
         c_in = 0;
         #10;
-        a = 16'd141;
-        b = 16'd103;
+        a = 16'd69834;
+        b = 16'd66500;
         c_in = 0;
         #10;
-        a = 16'd1544;
-        b = 16'd4565;
+        a = 16'd325;
+        b = 16'd97;
         c_in = 0;
         #10;
-        a = 16'd1235;
-        b = 16'd245;
+        a = 16'd44;
+        b = 16'd190;
         c_in = 0;
         #10;
-        a = 16'd6452;
-        b = 16'd3120;
+        a = 16'd463;
+        b = 16'd241;
         c_in = 0;
         #10;
-        a = 16'd812;
-        b = 16'd1452;
+        a = 16'd86;
+        b = 16'd572;
         c_in = 0;
         #10;
-        $finish;
     end
 endmodule
 
