@@ -131,10 +131,10 @@ module decoder2_4(input i_1, i_2, en,  output o_1, o_2,  o_3,  o_4);
 wire temp1, temp2;
 not_gate not1(.i_1(i_1), .o(temp1));
 not_gate not2(.i_1(i_2), .o(temp2));
-and3_gate and3_1(.i_1(i_1), .i_2(i_2), .i_3(en), .o(o_1));
+and3_gate and3_1(.i_1(i_1), .i_2(i_2), .i_3(en), .o(o_4));
 and3_gate and3_2(.i_1(temp1), .i_2(i_2), .i_3(en), .o(o_2));
 and3_gate and3_3(.i_1(i_1), .i_2(temp2), .i_3(en), .o(o_3));
-and3_gate and3_4(.i_1(temp1), .i_2(temp2), .i_3(en), .o(o_4));
+and3_gate and3_4(.i_1(temp1), .i_2(temp2), .i_3(en), .o(o_1));
 
 endmodule
 
