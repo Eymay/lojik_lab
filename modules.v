@@ -212,10 +212,12 @@ endmodule
 //PART 7
 
 module full_adder(input a, b, c_in, output s, c_out);
-wire l1, l2_1;
-half_adder half_adder1(.a(a), .b(b), .s(l1), .c(l2_1));
-half_adder half_adder2(.a(l1), .b(c_in), .s(s), .c(l2_2));
-or_gate or1(.i_1(l2_1), .i_2(l2_2), .o(c_out));
+
+    wire x ,y ,z;
+
+half_adder half_adder1(.a(a), .b(b), .s(x), .c(y));
+half_adder half_adder2(.a(x), .b(c_in), .s(s), .c(z));
+or_gate or1(.i_1(y), .i_2(z), .o(c_out));
 
 endmodule
 
