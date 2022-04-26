@@ -369,7 +369,7 @@ module async_JK_counter_test();
     reg pre;
     
     wire [3:0]o;
-    wire [3:0]on;
+    
     
     async_JK_counter_0to14 test(.Clk(CLK),.pre(pre),.b(o));
     
@@ -377,8 +377,8 @@ module async_JK_counter_test();
     
     initial begin
     
-    CLK = 0; pre = 0; #1;
-    pre = 1; #15;
+    CLK = 0; pre = 1; #1;
+    pre = 0; #15;
     
     $finish;
     end
