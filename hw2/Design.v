@@ -84,13 +84,13 @@ nand3_gate nand3_3(.i_1(temp1), .i_2(Q_not),.i_3(Pr_not), .o(Q));
 nand3_gate nand3_4(.i_1(temp2), .i_2(Q), .i_3(Clr_not), .o(Q_not));
 endmodule
 
-module async_JK_counter_0to14(input Clk,pre, output [3:0]b,bn);
+module async_JK_counter_0to14(input Clk,pre, output [3:0]b);
 wire reset;
 
-JK_flipflop_wClearPreset jk1(.J(1), .K(1), .Clk(Clk), .Pre(pre), .Clr(reset), .Q(b[0]),.Q_not(bn[0]));
-JK_flipflop_wClearPreset jk2(.J(1), .K(1), .Clk(b0), .Pre(pre), .Clr(reset), .Q(b[1]),.Q_not(bn[1]));
-JK_flipflop_wClearPreset jk3(.J(1), .K(1), .Clk(b1), .Pre(pre), .Clr(reset), .Q(b[2]),.Q_not(bn[2]));
-JK_flipflop_wClearPreset jk4(.J(1), .K(1), .Clk(b2), .Pre(pre), .Clr(reset), .Q(b[3]),.Q_not(bn[3]));
+JK_flipflop_wClearPreset jk1(.J(1), .K(1), .Clk(Clk), .Pre(pre), .Clr(reset), .Q(b[0]));
+JK_flipflop_wClearPreset jk2(.J(1), .K(1), .Clk(b[0]), .Pre(pre), .Clr(reset), .Q(b[1]));
+JK_flipflop_wClearPreset jk3(.J(1), .K(1), .Clk(b[1]), .Pre(pre), .Clr(reset), .Q(b[2]));
+JK_flipflop_wClearPreset jk4(.J(1), .K(1), .Clk(b[2]), .Pre(pre), .Clr(reset), .Q(b[3]));
 
 assign reset = b[1]&b[2]&b[3]&Clk;
 endmodule

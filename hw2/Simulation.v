@@ -371,7 +371,7 @@ module async_JK_counter_test();
     wire [3:0]o;
     wire [3:0]on;
     
-    async_JK_counter_0to14 test(.Clk(CLK),.pre(pre),.b(o),.bn(on));
+    async_JK_counter_0to14 test(.Clk(CLK),.pre(pre),.b(o));
     
     always #1 CLK = ~CLK; 
     
