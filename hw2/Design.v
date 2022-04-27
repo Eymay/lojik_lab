@@ -137,8 +137,8 @@ D_latch d1(.D(temp3), .En(Clk), .Q(Q), .Q_not(Q_not));
 endmodule
 
 module JK_flipflop_wClearPreset (input J, K, Clk, Pre, Clr, output Q, Q_not);
-wire temp1, temp2;
-wire Clr_not, Pr_not;
+wire temp1, temp2,temp3,temp4;
+wire m1, m1_not;
 /*
 nand_gate nand1(Clr,Clr, Clr_not);
 nand_gate nand2(Pre,Pre, Pr_not);
@@ -149,6 +149,7 @@ nand3_gate nand3_2(.i_1(Clk), .i_2(K), .i_3(Q), .o(temp2));
 nand3_gate nand3_3(.i_1(temp1), .i_2(Q_not),.i_3(Pr_not), .o(Q));
 nand3_gate nand3_4(.i_1(temp2), .i_2(Q), .i_3(Clr_not), .o(Q_not));
 */
+
 nand_gate nand1(K, K, K_not);
 
 and_gate_wNand and1(Q_not, J, temp1);
@@ -156,6 +157,9 @@ and_gate_wNand and2(Q, K_not, temp2);
 or_gate_wNand or1(temp1, temp2, temp3);
 
 D_latch_wPreClr d1(.D(temp3), .En(Clk), .Pre(Pre), .Clr(Clr), .Q(Q), .Q_not(Q_not));
+
+
+
 
 endmodule
 

@@ -382,4 +382,24 @@ module async_JK_counter_test();
     
     $finish;
     end
-    endmodule                                                                         
+    endmodule    
+    
+    module pulse_test();
+    
+    reg [7:0]value ;
+    reg CLK;
+    reg load;
+    
+    wire pulse;
+     
+    pulse_generator test(.value(value), .Clk(CLK), .load(load), .pulse(pulse));
+     
+    always #1 CLK = ~CLK; 
+    
+    initial begin
+    
+    CLK = 0; load =1; #1;
+    value = 8'b10101010; load = 0; #10;
+    $finish;
+    end
+    endmodule                                                                     
