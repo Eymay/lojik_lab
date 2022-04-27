@@ -139,17 +139,17 @@ endmodule
 module JK_flipflop_wClearPreset (input J, K, Clk, Pre, Clr, output Q, Q_not);
 wire temp1, temp2,temp3,temp4;
 wire m1, m1_not;
+
+
+nand3_gate nand3_1(J,Q_not,CLK,temp1);
+nand3_gate nand3_2(K,CLK,Q,temp2);
+SR_latch test(temp1,temp2,m1,m1_not);
+nand_gate nand1(m1,~CLK,Q);
+nand_gate nand2(m1_not,~CLK,Q_not);
+
+
+
 /*
-nand_gate nand1(Clr,Clr, Clr_not);
-nand_gate nand2(Pre,Pre, Pr_not);
-
-nand3_gate nand3_1(.i_1(Q_not), .i_2(J), .i_3(Clk), .o(temp1));
-nand3_gate nand3_2(.i_1(Clk), .i_2(K), .i_3(Q), .o(temp2));
-
-nand3_gate nand3_3(.i_1(temp1), .i_2(Q_not),.i_3(Pr_not), .o(Q));
-nand3_gate nand3_4(.i_1(temp2), .i_2(Q), .i_3(Clr_not), .o(Q_not));
-*/
-
 nand_gate nand1(K, K, K_not);
 
 and_gate_wNand and1(Q_not, J, temp1);
@@ -157,7 +157,7 @@ and_gate_wNand and2(Q, K_not, temp2);
 or_gate_wNand or1(temp1, temp2, temp3);
 
 D_latch_wPreClr d1(.D(temp3), .En(Clk), .Pre(Pre), .Clr(Clr), .Q(Q), .Q_not(Q_not));
-
+*/
 
 
 
@@ -171,7 +171,7 @@ JK_flipflop_wClearPreset jk2(.J(1), .K(1), .Clk(b[0]), .Pre(pre), .Clr(reset), .
 JK_flipflop_wClearPreset jk3(.J(1), .K(1), .Clk(b[1]), .Pre(pre), .Clr(reset), .Q(b[2]), .Q_not(bn[2]));
 JK_flipflop_wClearPreset jk4(.J(1), .K(1), .Clk(b[2]), .Pre(pre), .Clr(reset), .Q(b[3]), .Q_not(bn[3]));
 
-assign reset =  b[1]&b[2]&b[3]&Clk;
+assign reset =  1;
 endmodule
 
 module sync_JK_counter_0to14(input Clk, output b0, b1, b2, b3);
