@@ -6,6 +6,14 @@ module nand_gate (input i_1, i_2, output o);
 assign o = ~(i_1 & i_2);
 endmodule
 
+module or_gate_wNand (input i_1, i_2, output o);
+wire temp1, temp2;
+nand_gate nand1(i_1, i_1, temp1);
+nand_gate nand2(i_2, i_2, temp2);
+
+nand_gate nand3(temp1, temp2, o);
+endmodule
+
 module nand3_gate(input i_1 , i_2 , i_3 , output o);
 wire temp1, temp2;
 nand_gate nand1(.i_1(i_1), .i_2(i_2),.o(temp1));
@@ -45,17 +53,37 @@ nand3_gate nand3_2(.i_1(temp2), .i_2(Q), .i_3(Clr_not), .o(Q_not));
 
 endmodule 
 
-module D_flipflop (input D, Clk, output Q, Q_not);
+module D_latch (input D, En, output Q, Q_not);
 wire temp1;
 nand_gate nand1(.i_1(D), .i_2(D), .o(temp1));
-SR_Latch_wEn SR_Latch(.S(D), .R(temp1), .En(Clk), .Q(Q), .Q_not(Q_not));
+SR_Latch_wEn SR_Latch(.S(D), .R(temp1), .En(En), .Q(Q), .Q_not(Q_not));
+endmodule
 
+module D_latch_wPreClr (input D, En, Pre, Clr, output Q, Q_not);
+wire temp1;
+nand_gate nand1(.i_1(D), .i_2(D), .o(temp1));
+SR_Latch_wEn_wPreClr sr1(.S(D), .R(temp1), .En(En), .Pre(Pre), .Clr(Clr), .Q(Q) ,.Q_not(Q_not));
+endmodule
+
+module D_flipflop (input D, Clk, output Q, Q_not);
+wire clk_not, clk_not_not;
+wire Q1;
+nand_gate nand1(.i_1(Clk), .i_2(Clk), .o(clk_not));
+nand_gate nand2(.i_1(clk_not), .i_2(clk_not), .o(clk_not_not));
+
+
+D_latch D_latch1 (.D(D), .En(clk_not), .Q(Q1));
+D_latch D_latch2 (.D(Q1), .En(clk_not_not), .Q(Q), .Q_not(Q_not));
 endmodule
 
 module D_flipflop_wPreClr (input D, Clk, Pre, Clr, output Q, Q_not);
-wire temp1;
-nand_gate nand1(.i_1(D), .i_2(D), .o(temp1));
-SR_Latch_wEn_wPreClr SR_Latch(.S(D), .R(temp1), .En(Clk), .Pre(Pre), .Clr(Clr), .Q(Q), .Q_not(Q_not));
+wire clk_not, clk_not_not;
+wire Q1;
+nand_gate nand1(.i_1(Clk), .i_2(Clk), .o(clk_not));
+nand_gate nand2(.i_1(clk_not), .i_2(clk_not), .o(clk_not_not));
+
+D_latch_wPreClr d1(.D(D), .En(clk_not), .Pre(Clr), .Clr(Pre), .Q(Q1));
+D_latch_wPreClr d2(.D(Q1), .En(clk_not_not), .Pre(Pre), .Clr(Clr), .Q(Q) ,.Q_not(Q_not));
 
 endmodule
 
