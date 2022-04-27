@@ -14,6 +14,12 @@ nand_gate nand2(i_2, i_2, temp2);
 nand_gate nand3(temp1, temp2, o);
 endmodule
 
+module and_gate_wNand (input i_1, i_2, output o);
+wire temp1;
+nand_gate nand1(i_1, i_2, temp1);
+nand_gate nand2(temp1,temp1, o);
+endmodule
+
 module nand3_gate(input i_1 , i_2 , i_3 , output o);
 wire temp1, temp2;
 nand_gate nand1(.i_1(i_1), .i_2(i_2),.o(temp1));
@@ -88,20 +94,44 @@ D_latch_wPreClr d2(.D(Q1), .En(clk_not_not), .Pre(Pre), .Clr(Clr), .Q(Q) ,.Q_not
 endmodule
 
 module JK_flipflop (input J, K, Clk, output Q, Q_not);
+wire master1, master2;
 wire temp1, temp2;
+wire slave1, slave2;
+wire K_not;
+wire clk_not;
 
-nand3_gate nand3_1(.i_1(Q_not), .i_2(J), .i_3(Clk), .o(temp1));
-nand3_gate nand3_2(.i_1(Clk), .i_2(K), .i_3(Q), .o(temp2));
+nand_gate nand1(Clk,Clk, clk_not);
+nand3_gate nand3_1(.i_1(Q_not), .i_2(J), .i_3(Clk), .o(master1));
+nand3_gate nand3_2(.i_1(Clk), .i_2(K), .i_3(Q), .o(master2));
 
-nand_gate nand_1(.i_1(temp1), .i_2(Q_not), .o(Q));
-nand_gate nand_2(.i_1(temp2), .i_2(Q), .o(Q_not));
+SR_Latch sr1(.S(master1), .R(master2), .Q(temp1), .Q_not(temp2));
+
+nand_gate nand2(.i_1(temp1), .i_2(clk_not), .o(slave1));
+nand_gate nand3(.i_1(temp2), .i_2(clk_not), .o(slave2));
+
+SR_Latch sr2(.S(slave1), .R(slave2), .Q(Q), .Q_not(Q_not));
+
+//nand_gate nand_1(.i_1(temp1), .i_2(Q_not), .o(Q));
+//nand_gate nand_2(.i_1(temp2), .i_2(Q), .o(Q_not));
+/*
+not edge triggered
+nand_gate nand1(K, K, K_not);
+
+and_gate_wNand and1(Q_not, J, temp1);
+and_gate_wNand and2(Q, K_not, temp2);
+or_gate_wNand or1(temp1, temp2, temp3);
+
+D_latch d1(.D(temp3), .En(Clk), .Q(Q), .Q_not(Q_not));
+*/
+
+
 
 endmodule
 
 module JK_flipflop_wClearPreset (input J, K, Clk, Pre, Clr, output Q, Q_not);
 wire temp1, temp2;
 wire Clr_not, Pr_not;
-
+/*
 nand_gate nand1(Clr,Clr, Clr_not);
 nand_gate nand2(Pre,Pre, Pr_not);
 
@@ -110,6 +140,15 @@ nand3_gate nand3_2(.i_1(Clk), .i_2(K), .i_3(Q), .o(temp2));
 
 nand3_gate nand3_3(.i_1(temp1), .i_2(Q_not),.i_3(Pr_not), .o(Q));
 nand3_gate nand3_4(.i_1(temp2), .i_2(Q), .i_3(Clr_not), .o(Q_not));
+*/
+nand_gate nand1(K, K, K_not);
+
+and_gate_wNand and1(Q_not, J, temp1);
+and_gate_wNand and2(Q, K_not, temp2);
+or_gate_wNand or1(temp1, temp2, temp3);
+
+D_latch_wPreClr d1(.D(temp3), .En(Clk), .Pre(Pre), .Clr(Clr), .Q(Q), .Q_not(Q_not));
+
 endmodule
 
 module async_JK_counter_0to14(input Clk,pre, output [3:0]b);
@@ -120,7 +159,7 @@ JK_flipflop_wClearPreset jk2(.J(1), .K(1), .Clk(b[0]), .Pre(pre), .Clr(reset), .
 JK_flipflop_wClearPreset jk3(.J(1), .K(1), .Clk(b[1]), .Pre(pre), .Clr(reset), .Q(b[2]), .Q_not(bn[2]));
 JK_flipflop_wClearPreset jk4(.J(1), .K(1), .Clk(b[2]), .Pre(pre), .Clr(reset), .Q(b[3]), .Q_not(bn[3]));
 
-assign reset = 1;
+assign reset =  b[1]&b[2]&b[3]&Clk;
 endmodule
 
 module sync_JK_counter_0to14(input Clk, output b0, b1, b2, b3);
