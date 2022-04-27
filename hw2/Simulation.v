@@ -260,6 +260,34 @@ module D_test();
               end
            endmodule
            
+module D_latch_test();
+                       reg a;
+                       reg CLK;
+                       
+                       wire o;
+                       wire o_not;
+                       
+                       
+                      D_latch test(.D(a), .En(CLK), .Q(o),.Q_not(o_not));
+                       
+                      always #1 CLK = ~CLK;  
+                      initial begin
+                        
+                         CLK = 0;
+                         a = 0;
+                         #10;    
+                         a = 1;
+                         #10;
+                         a = 1;
+                         #10;
+                         a = 0;
+                         #10;
+                         a = 1;
+                         #10;
+                           
+                         $finish;
+                         end
+                      endmodule
            
 module D_preclr_test();
                reg a;
@@ -330,10 +358,59 @@ module JK_test();
               j = 0; k = 0; #10;
               j = 0; k = 1; #10;
               j = 1; k = 1; #10;
+              j = 0; k = 1; #10;
                 
               $finish;
               end
            endmodule
+ 
+  module JK_smallff_test();
+                             reg j;
+            reg k;
+            reg CLK;
+            
+            wire o;
+            wire o_not;
+            
+            
+           JK_smallff  test(.J(j),.K(k), .Clk(CLK), .Q(o),.Q_not(o_not));
+            
+           always #1 CLK = ~CLK;  
+           initial begin
+             
+             
+              CLK = 0; j = 1; k = 0;  #10;
+              j = 0; k = 0; #10;
+              j = 0; k = 1; #10;
+              j = 1; k = 1; #10;
+                
+              $finish;
+              end
+           endmodule
+                     
+ module JK_MasterSlave_test();
+                   reg j;
+  reg k;
+  reg CLK;
+  
+  wire o;
+  wire o_not;
+  
+  
+ JK_MasterSlave  test(.J(j),.K(k), .Clk(CLK), .Q(o),.Q_not(o_not));
+  
+ always #1 CLK = ~CLK;  
+ initial begin
+   
+   
+    CLK = 0; j = 1; k = 0; #10;
+    j = 0; k = 0; #10;
+    j = 0; k = 1; #10;
+    j = 1; k = 1; #10;
+      
+    $finish;
+    end
+ endmodule
            
 module JK_preclr_test();
             reg j;
@@ -357,8 +434,8 @@ module JK_preclr_test();
               j = 0; k = 0; pre = 0; clr = 1; #10;
               j = 1; k = 0; pre = 0; clr = 0; #10;
               j = 0; k = 1; pre = 0; clr = 0; #10;
-              j = 1; k = 1; pre = 0; clr = 0; #10;
-                
+              j = 1; k = 1; pre = 0; clr = 0; #1;
+              j = 0; k = 1; pre = 0; clr = 0; #10;
               $finish;
               end
            endmodule
@@ -382,4 +459,31 @@ module async_JK_counter_test();
     
     $finish;
     end
-    endmodule                                                                         
+    endmodule    
+    
+    module pulse_test();
+    
+        reg [7:0]value ;
+        reg CLK;
+        reg load;
+        reg reset;
+    
+        wire pulse;
+    
+        pulse_generator test(.value(value), .Clk(CLK), .load(load), .Reset(reset),.pulse(pulse));
+    
+        always #1 CLK = ~CLK; 
+    
+        initial begin
+        
+        CLK = 0; #1;
+        reset = 1; #3;
+        load=1;
+        value = 8'b10101010; #10;
+        value = 8'b10001000; #10;
+         value = 8'b10000000; #10;
+        load = 0;
+        #10;
+        $finish;
+        end
+        endmodule                                                                     
