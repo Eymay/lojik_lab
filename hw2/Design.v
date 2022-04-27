@@ -29,10 +29,18 @@ endmodule
 
 
 module SR_Latch (input S, R, output Q, Q_not);
-
+/*
 nor_gate nor1(.i_1(R), .i_2(Q_not), .o(Q));
 nor_gate nor2(.i_1(Q), .i_2(S), .o(Q_not));
-
+*/
+/*wire s_not, r_not;
+nand_gate not1(S, S, s_not);
+nand_gate not2(R, R, r_not);
+nand_gate nand1(.i_1(s_not), .i_2(Q_not), .o(Q));
+nand_gate nand2(.i_1(Q), .i_2(r_not), .o(Q_not));
+*/
+nand_gate nand1(.i_1(S), .i_2(Q_not), .o(Q));
+nand_gate nand2(.i_1(Q), .i_2(R), .o(Q_not));
 endmodule
 
 module SR_Latch_wEn (input S, R, En, output Q, Q_not);
