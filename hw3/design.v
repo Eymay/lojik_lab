@@ -87,3 +87,134 @@ module CircularRightShift (
 );
     out = (data >> shiftAmount) | (data << (26-shiftAmount));
 endmodule
+
+
+module CharDecoder (
+    input [7:0] char,
+    output [25:0] decodedChar
+);
+    always @(*) begin
+        case (char)
+            'A': decodedChar = 7'h0000001;
+            'B': decodedChar = 7'h0000002;
+            'C': decodedChar = 7'h0000004;
+
+    end
+
+endmodule
+
+//Part 2
+
+module CaesarEncryption (
+    input [7:0] plainChar,
+    input [4:0] shiftCount,
+    output [7:0] cipherChar
+);
+
+    wire [25:0] decodedChar;
+    wire [25:0] shiftedDecodedChar;
+    
+
+    CharDecoder chd1(.char(plainChar), .decodedChar(decodedChar));
+    CircularRightShift crs1(.data(decodedChar), .shiftAmount(shiftCount), .out(shiftedDecodedChar));
+    CharEncoder che1(.decodedChar(shiftedDecodedChar), .char(cipherChar));
+    
+endmodule
+
+module CaesarDecryption (
+    input [7:0] cipherChar
+    input [4:0] shiftCount,
+    output [7:0] decryptedChar,
+);
+
+    wire [25:0] decodedChar;
+    wire [25:0] shiftedDecodedChar;
+    
+
+    CharDecoder chd1(.char(plainChar), .decodedChar(decodedChar));
+    CircularLeftShift crs1(.data(decodedChar), .shiftAmount(shiftCount), .out(shiftedDecodedChar));
+    CharEncoder che1(.decodedChar(shiftedDecodedChar), .char(cipherChar));
+    
+endmodule
+
+module CaesarEnvironment (
+    input [7:0] plainChar,
+    input [4:0] shiftCount,
+    output [7:0] cipherChar,
+    output [7:0] decryptedChar
+);
+
+    //TODO cipherChar hem output hem ara eleman olarak verilmiş dökümanda
+    //wire [7:0] intermediate_cipherChar;
+    //CaesarEncryption ce1(.plainChar(plainChar), .shiftCount(shiftCount), .cipherChar(intermediate_cipherChar));
+    //CaesarDecryption cd1(.cipherChar(intermediate_cipherChar), .shiftCount(shiftCount), .decryptedChar(decryptedChar));
+    CaesarEncryption ce1(.plainChar(plainChar), .shiftCount(shiftCount), .cipherChar(cipherChar));
+    CaesarDecryption cd1(.cipherChar(cipherChar), .shiftCount(shiftCount), .decryptedChar(decryptedChar));
+
+
+
+endmodule
+
+//Part 3
+
+module VigenereEncryption (
+    input [7:0] plainChar,
+    input [79:0] keyInput,
+    input load,
+    input clock,
+    output [7:0] cipherChar
+);
+    reg [79:0] key
+
+    always @(posedge load) begin
+        key = keyInput;
+    end
+
+    always @(posedge clock) begin
+        key = key >> 8;
+    end
+
+    cipherChar = (plainChar + key[7: 0]) % 26;    
+
+endmodule
+
+module VigenereDecryption (
+    input [7:0] cipherChar,
+    input [79:0] keyInput,
+    input load,
+    input clock,
+    output [7:0] decryptedChar
+);
+    reg [79:0] key
+
+    always @(posedge load) begin
+        key = keyInput;
+    end
+
+    always @(posedge clock) begin
+        key = key >> 8;
+    end
+
+    decryptedChar = (cipherChar - key[7: 0]) % 26;   
+
+
+endmodule
+
+module VigenereEnvironment (
+    input [7:0] plainChar,
+    input [79:0] keyInput,
+    input load,
+    input clock,
+    output [7:0] cipherChar,
+    output [7:0] decryptedChar
+);
+
+    VigenereEncryption ve1(.plainChar(plainChar), .keyInput(keyInput), .load(load), .clock(clock), .cipherChar(cipherChar));
+    VigenereDecryption vd1(.cipherChar(cipherChar), .keyInput(keyInput), .load(load), .clock(clock), .decryptedChar(decryptedChar));
+
+
+    
+endmodule
+
+//Part 4
+
