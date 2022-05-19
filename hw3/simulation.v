@@ -103,4 +103,29 @@ module CircularLeftShift_test();
     $finish;
     end
 endmodule    
+
+
+module CircularRightShift_test();
+    reg [25:0] data;
+    reg [4:0] shiftAmount;
+    wire [25:0] out;
+    
+    CircularRightShift test(.data(data),.shiftAmount(shiftAmount),.out(out));
+    
+    initial begin
+    data = 26'h0000001; shiftAmount = 5'b00001; #10;
+    data = 26'h0000002; shiftAmount = 5'b00010; #10;
+    data = 26'h0000004; shiftAmount = 5'b00011; #10;
+    data = 26'h0000008; shiftAmount = 5'b00100; #10;
+    data = 26'h0000010; shiftAmount = 5'b00101; #10;
+    data = 26'h0000020; shiftAmount = 5'b00110; #10;
+    data = 26'h0000040; shiftAmount = 5'b00111; #10;
+    data = 26'h0000080; shiftAmount = 5'b01000; #10;
+    data = 26'h0000100; shiftAmount = 5'b01001; #10;
+    data = 26'h0000200; shiftAmount = 5'b01010; #10;
+    data = 26'h0000400; shiftAmount = 5'b10000; #10;
+    
+    $finish;
+    end
+endmodule
  
