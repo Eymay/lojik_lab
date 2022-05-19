@@ -6,12 +6,6 @@ module nand_gate (input i_1, i_2, output o);
 assign o = ~(i_1 & i_2);
 endmodule
 
-module and3_gate_wNand(input i_1, i_2,i_3 , output o);
-wire temp1;
-and_gate_wNand and1(i_1, i_2, temp1);
-and_gate_wNand and2(temp1, i_3, o);
-endmodule
-
 module or_gate_wNand (input i_1, i_2, output o);
 wire temp1, temp2;
 nand_gate nand1(i_1, i_1, temp1);
@@ -34,7 +28,7 @@ nand_gate nand3(.i_1(temp2),.i_2(i_3),.o(o));
 endmodule
 
 
-module SR_Latch_NOT (input S_not, R_not, output Q, Q_not);
+module SR_Latch (input S, R, output Q, Q_not);
 /*
 nor_gate nor1(.i_1(R), .i_2(Q_not), .o(Q));
 nor_gate nor2(.i_1(Q), .i_2(S), .o(Q_not));
@@ -45,20 +39,8 @@ nand_gate not2(R, R, r_not);
 nand_gate nand1(.i_1(s_not), .i_2(Q_not), .o(Q));
 nand_gate nand2(.i_1(Q), .i_2(r_not), .o(Q_not));
 */
-nand_gate nand1(.i_1(S_not), .i_2(Q_not), .o(Q));
-nand_gate nand2(.i_1(Q), .i_2(R_not), .o(Q_not));
-endmodule
-
-module SR_Latch (input S, R, output Q, Q_not);
-/*
-nor_gate nor1(.i_1(R), .i_2(Q_not), .o(Q));
-nor_gate nor2(.i_1(Q), .i_2(S), .o(Q_not));
-*/
-wire s_not, r_not;
-nand_gate not1(S, S, s_not);
-nand_gate not2(R, R, r_not);
-SR_Latch_NOT srNot1(.S_not(s_not), .R_not(r_not), .Q(Q), .Q_not(Q_not));
-
+nand_gate nand1(.i_1(S), .i_2(Q_not), .o(Q));
+nand_gate nand2(.i_1(Q), .i_2(R), .o(Q_not));
 endmodule
 
 module SR_Latch_wEn (input S, R, En, output Q, Q_not);
@@ -130,12 +112,12 @@ nand_gate nand1(Clk,Clk, clk_not);
 nand3_gate nand3_1(.i_1(Q_not), .i_2(J), .i_3(Clk), .o(master1));
 nand3_gate nand3_2(.i_1(Clk), .i_2(K), .i_3(Q), .o(master2));
 
-SR_Latch_NOT sr1(.S_not(master1), .R_not(master2), .Q(temp1), .Q_not(temp2));
+SR_Latch sr1(.S(master1), .R(master2), .Q(temp1), .Q_not(temp2));
 
 nand_gate nand2(.i_1(temp1), .i_2(clk_not), .o(slave1));
 nand_gate nand3(.i_1(temp2), .i_2(clk_not), .o(slave2));
 
-SR_Latch_NOT sr2(.S_not(slave1), .R_not(slave2), .Q(Q), .Q_not(Q_not));
+SR_Latch sr2(.S(slave1), .R(slave2), .Q(Q), .Q_not(Q_not));
 
 //nand_gate nand_1(.i_1(temp1), .i_2(Q_not), .o(Q));
 //nand_gate nand_2(.i_1(temp2), .i_2(Q), .o(Q_not));
@@ -149,38 +131,16 @@ or_gate_wNand or1(temp1, temp2, temp3);
 
 D_latch d1(.D(temp3), .En(Clk), .Q(Q), .Q_not(Q_not));
 */
-endmodule
-module JK_smallff(input J, K,Clk, output Q, Q_not);
-wire and_o1, and_o2;
 
-and3_gate_wNand and3_1(J, Clk, Q_not, and_o1);
-and3_gate_wNand and3_2(K, Clk, Q, and_o2);
 
-SR_Latch sr1(.S(and_o1), .R(and_o2),.Q(Q), .Q_not(Q_not));
 
-endmodule
-
-module JK_MasterSlave(input J, K, Clk, output Q, Q_not);
-wire clk_not, master2slave1, master2slave2;
-
-nand_gate not_gate(Clk, Clk, clk_not);
-JK_smallff jk1(J,K,Clk,master2slave1,master2slave2);
-JK_smallff jk2(master2slave1,master2slave2,Clk,Q,Q_not);
 endmodule
 
 module JK_flipflop_wClearPreset (input J, K, Clk, Pre, Clr, output Q, Q_not);
-wire temp1, temp2,temp3;
-wire Clr_not, Pr_not, K_not;
-/*
-nand_gate nand1(Clr,Clr, Clr_not);
-nand_gate nand2(Pre,Pre, Pr_not);
+wire temp1, temp2,temp3,temp4;
+wire m1, m1_not,m2,m2_not;
 
-nand3_gate nand3_1(.i_1(Q_not), .i_2(J), .i_3(Clk), .o(temp1));
-nand3_gate nand3_2(.i_1(Clk), .i_2(K), .i_3(Q), .o(temp2));
 
-nand3_gate nand3_3(.i_1(temp1), .i_2(Q_not),.i_3(Pr_not), .o(Q));
-nand3_gate nand3_4(.i_1(temp2), .i_2(Q), .i_3(Clr_not), .o(Q_not));
-*/
 nand_gate nand1(K, K, K_not);
 
 and_gate_wNand and1(Q_not, J, temp1);
@@ -188,6 +148,9 @@ and_gate_wNand and2(Q, K_not, temp2);
 or_gate_wNand or1(temp1, temp2, temp3);
 
 D_latch_wPreClr d1(.D(temp3), .En(Clk), .Pre(Pre), .Clr(Clr), .Q(Q), .Q_not(Q_not));
+
+
+
 
 endmodule
 
@@ -199,7 +162,7 @@ JK_flipflop_wClearPreset jk2(.J(1), .K(1), .Clk(b[0]), .Pre(pre), .Clr(reset), .
 JK_flipflop_wClearPreset jk3(.J(1), .K(1), .Clk(b[1]), .Pre(pre), .Clr(reset), .Q(b[2]), .Q_not(bn[2]));
 JK_flipflop_wClearPreset jk4(.J(1), .K(1), .Clk(b[2]), .Pre(pre), .Clr(reset), .Q(b[3]), .Q_not(bn[3]));
 
-assign reset =  b[1]&b[2]&b[3]&Clk;
+assign reset =  1;
 endmodule
 
 module sync_JK_counter_0to14(input Clk, output b0, b1, b2, b3);
@@ -217,17 +180,17 @@ JK_flipflop jk4(.J(j34), .K(j34), .Clk(Clk),  .Q(b3));
 endmodule
 
 
-module pulse_generator(input load, Clk, Reset,[7:0]value, output pulse);
+module pulse_generator(input [7:0]value, Clk, load, output pulse);
 //link https://assets.nexperia.com/documents/data-sheet/74LV165A.pdf
 wire [7:0] data_line;
 wire [6:0] shift_line;
 assign data_line[7:0] = load & value[7:0];
-D_flipflop_wPreClr D0(.D(load), .Clk(Clk), .Pre(data_line[0]), .Clr(Reset), .Q(shift_line[0]));
-D_flipflop_wPreClr D1(.D(shift_line[0]), .Clk(Clk), .Pre(data_line[1]),.Clr(Reset), .Q(shift_line[1]));
-D_flipflop_wPreClr D2(.D(shift_line[1]), .Clk(Clk), .Pre(data_line[2]),.Clr(Reset), .Q(shift_line[2]));
-D_flipflop_wPreClr D3(.D(shift_line[2]), .Clk(Clk), .Pre(data_line[3]),.Clr(Reset), .Q(shift_line[3]));
-D_flipflop_wPreClr D4(.D(shift_line[3]), .Clk(Clk), .Pre(data_line[4]),.Clr(Reset), .Q(shift_line[4]));
-D_flipflop_wPreClr D5(.D(shift_line[4]), .Clk(Clk), .Pre(data_line[5]),.Clr(Reset), .Q(shift_line[5]));
-D_flipflop_wPreClr D6(.D(shift_line[5]), .Clk(Clk), .Pre(data_line[6]),.Clr(Reset), .Q(shift_line[6]));
-D_flipflop_wPreClr D7(.D(shift_line[6]), .Clk(Clk), .Pre(data_line[7]),.Clr(Reset), .Q(pulse));
+D_flipflop_wPreClr D0 (.D(load), .Clk(Clk), .Pre(data_line[0]), .Q(shift_line[0]));
+D_flipflop_wPreClr D1 (.D(shift_line[0]), .Clk(Clk), .Pre(data_line[1]), .Q(shift_line[1]));
+D_flipflop_wPreClr D2 (.D(shift_line[1]), .Clk(Clk), .Pre(data_line[2]), .Q(shift_line[2]));
+D_flipflop_wPreClr D3 (.D(shift_line[2]), .Clk(Clk), .Pre(data_line[3]), .Q(shift_line[3]));
+D_flipflop_wPreClr D4 (.D(shift_line[3]), .Clk(Clk), .Pre(data_line[4]), .Q(shift_line[4]));
+D_flipflop_wPreClr D5 (.D(shift_line[4]), .Clk(Clk), .Pre(data_line[5]), .Q(shift_line[5]));
+D_flipflop_wPreClr D6 (.D(shift_line[5]), .Clk(Clk), .Pre(data_line[6]), .Q(shift_line[6]));
+D_flipflop_wPreClr D7 (.D(shift_line[6]), .Clk(Clk), .Pre(data_line[7]), .Q(pulse));
 endmodule
