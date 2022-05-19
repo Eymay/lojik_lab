@@ -39,7 +39,7 @@ endmodule
 
 module CharEncoder (
     input [25:0] decodedChar,
-    output [7:0] char
+    output reg [7:0] char
 );
     always @(*) begin
         case (decodedChar)
