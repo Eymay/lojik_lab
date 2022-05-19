@@ -32,6 +32,7 @@ module CharDecoder (
             "X": decodedChar = 7'h0800000;
             "Y": decodedChar = 7'h1000000;
             "Z": decodedChar = 7'h2000000;
+        endcase
     end
 
 endmodule
@@ -68,6 +69,7 @@ module CharEncoder (
             7'h0800000: char = "X";
             7'h1000000: char = "Y";
             7'h2000000: char = "Z";
+        endcase
     end
 
 endmodule
