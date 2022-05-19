@@ -79,7 +79,7 @@ module CircularLeftShift (
     input [4:0] shiftAmount,
     output [25:0] out
 );
-    out = (data << shiftAmount) | (data >> (26-shiftAmount));
+    assign out = (data << shiftAmount) | (data >> (26-shiftAmount));
 endmodule
 
 module CircularRightShift (
@@ -87,24 +87,24 @@ module CircularRightShift (
     input [4:0] shiftAmount,
     output [25:0] out
 );
-    out = (data >> shiftAmount) | (data << (26-shiftAmount));
+    assign out = (data >> shiftAmount) | (data << (26-shiftAmount));
 endmodule
 
-
+/*
 module CharDecoder (
     input [7:0] char,
-    output [25:0] decodedChar
+    output reg [25:0] decodedChar
 );
     always @(*) begin
         case (char)
-            'A': decodedChar = 7'h0000001;
-            'B': decodedChar = 7'h0000002;
-            'C': decodedChar = 7'h0000004;
-
+            "A": decodedChar = 26'h0000001;
+            "B": decodedChar = 26'h0000002;
+            "C": decodedChar = 26'h0000004;
+        endcase
     end
 
 endmodule
-
+*/
 //Part 2
 
 module CaesarEncryption (
@@ -124,7 +124,7 @@ module CaesarEncryption (
 endmodule
 
 module CaesarDecryption (
-    input [7:0] cipherChar
+    input [7:0] cipherChar,
     input [4:0] shiftCount,
     output [7:0] decryptedChar,
 );
