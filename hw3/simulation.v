@@ -114,14 +114,16 @@ module CircularRightShift_test();
     
     initial begin
     data = 26'h0000001; shiftAmount = 5'b00001; #10;
+    data = 26'h0000001; shiftAmount = 5'b00010; #10;
     data = 26'h0000002; shiftAmount = 5'b00010; #10;
-    data = 26'h0000004; shiftAmount = 5'b00011; #10;
-    data = 26'h0000008; shiftAmount = 5'b00100; #10;
+    data = 26'h0000002; shiftAmount = 5'b01010; #10;
+    data = 26'h0000005; shiftAmount = 5'b00011; #10;
+    data = 26'h0000009; shiftAmount = 5'b00100; #10;
     data = 26'h0000010; shiftAmount = 5'b00101; #10;
-    data = 26'h0000020; shiftAmount = 5'b00110; #10;
+    data = 26'h0000021; shiftAmount = 5'b00110; #10;
     data = 26'h0000040; shiftAmount = 5'b00111; #10;
-    data = 26'h0000080; shiftAmount = 5'b01000; #10;
-    data = 26'h0000100; shiftAmount = 5'b01001; #10;
+    data = 26'h0010080; shiftAmount = 5'b01000; #10;
+    data = 26'h0000105; shiftAmount = 5'b01001; #10;
     data = 26'h0000200; shiftAmount = 5'b01010; #10;
     data = 26'h0000400; shiftAmount = 5'b10000; #10;
     
