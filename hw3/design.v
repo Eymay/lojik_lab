@@ -2,36 +2,36 @@
 
 module CharDecoder (
     input [7:0] char,
-    output [25:0] decodedChar
+    output reg [25:0] decodedChar
 );
     always @(*) begin
         case (char)
-            "A": decodedChar = 7'h0000001;
-            "B": decodedChar = 7'h0000002;
-            "C": decodedChar = 7'h0000004;
-            "D": decodedChar = 7'h0000008;
-            "E": decodedChar = 7'h0000010;
-            "F": decodedChar = 7'h0000020;
-            "G": decodedChar = 7'h0000040;
-            "H": decodedChar = 7'h0000080;
-            "I": decodedChar = 7'h0000100;
-            "J": decodedChar = 7'h0000200;
-            "K": decodedChar = 7'h0000400;
-            "L": decodedChar = 7'h0000800;
-            "M": decodedChar = 7'h0001000;
-            "N": decodedChar = 7'h0002000;
-            "O": decodedChar = 7'h0004000;
-            "P": decodedChar = 7'h0008000;
-            "Q": decodedChar = 7'h0010000;
-            "R": decodedChar = 7'h0020000;
-            "S": decodedChar = 7'h0040000;
-            "T": decodedChar = 7'h0080000;
-            "U": decodedChar = 7'h0100000;
-            "V": decodedChar = 7'h0200000;
-            "W": decodedChar = 7'h0400000;
-            "X": decodedChar = 7'h0800000;
-            "Y": decodedChar = 7'h1000000;
-            "Z": decodedChar = 7'h2000000;
+            "A": decodedChar = 26'h0000001;
+            "B": decodedChar = 26'h0000002;
+            "C": decodedChar = 26'h0000004;
+            "D": decodedChar = 26'h0000008;
+            "E": decodedChar = 26'h0000010;
+            "F": decodedChar = 26'h0000020;
+            "G": decodedChar = 26'h0000040;
+            "H": decodedChar = 26'h0000080;
+            "I": decodedChar = 26'h0000100;
+            "J": decodedChar = 26'h0000200;
+            "K": decodedChar = 26'h0000400;
+            "L": decodedChar = 26'h0000800;
+            "M": decodedChar = 26'h0001000;
+            "N": decodedChar = 26'h0002000;
+            "O": decodedChar = 26'h0004000;
+            "P": decodedChar = 26'h0008000;
+            "Q": decodedChar = 26'h0010000;
+            "R": decodedChar = 26'h0020000;
+            "S": decodedChar = 26'h0040000;
+            "T": decodedChar = 26'h0080000;
+            "U": decodedChar = 26'h0100000;
+            "V": decodedChar = 26'h0200000;
+            "W": decodedChar = 26'h0400000;
+            "X": decodedChar = 26'h0800000;
+            "Y": decodedChar = 26'h1000000;
+            "Z": decodedChar = 26'h2000000;
         endcase
     end
 
@@ -43,32 +43,32 @@ module CharEncoder (
 );
     always @(*) begin
         case (decodedChar)
-            7'h0000001: char = "A";
-            7'h0000002: char = "B";
-            7'h0000004: char = "C";
-            7'h0000008: char = "D";
-            7'h0000010: char = "E";
-            7'h0000020: char = "F";
-            7'h0000040: char = "G";
-            7'h0000080: char = "H";
-            7'h0000100: char = "I";
-            7'h0000200: char = "J";
-            7'h0000400: char = "K";
-            7'h0000800: char = "L";
-            7'h0001000: char = "M";
-            7'h0002000: char = "N";
-            7'h0004000: char = "O";
-            7'h0008000: char = "P";
-            7'h0010000: char = "Q";
-            7'h0020000: char = "R";
-            7'h0040000: char = "S";
-            7'h0080000: char = "T";
-            7'h0100000: char = "U";
-            7'h0200000: char = "V";
-            7'h0400000: char = "W";
-            7'h0800000: char = "X";
-            7'h1000000: char = "Y";
-            7'h2000000: char = "Z";
+            26'h0000001: char = "A";
+            26'h0000002: char = "B";
+            26'h0000004: char = "C";
+            26'h0000008: char = "D";
+            26'h0000010: char = "E";
+            26'h0000020: char = "F";
+            26'h0000040: char = "G";
+            26'h0000080: char = "H";
+            26'h0000100: char = "I";
+            26'h0000200: char = "J";
+            26'h0000400: char = "K";
+            26'h0000800: char = "L";
+            26'h0001000: char = "M";
+            26'h0002000: char = "N";
+            26'h0004000: char = "O";
+            26'h0008000: char = "P";
+            26'h0010000: char = "Q";
+            26'h0020000: char = "R";
+            26'h0040000: char = "S";
+            26'h0080000: char = "T";
+            26'h0100000: char = "U";
+            26'h0200000: char = "V";
+            26'h0400000: char = "W";
+            26'h0800000: char = "X";
+            26'h1000000: char = "Y";
+            26'h2000000: char = "Z";
         endcase
     end
 
