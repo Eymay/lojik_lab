@@ -166,7 +166,7 @@ module VigenereEncryption (
     input clock,
     output [7:0] cipherChar
 );
-    reg [79:0] key
+    reg [79:0] key;
 
     always @(posedge load) begin
         key = keyInput;
@@ -176,7 +176,7 @@ module VigenereEncryption (
         key = key >> 8;
     end
 
-    cipherChar = (plainChar + key[7: 0]) % 26;    
+    assign cipherChar = (plainChar + key[7: 0]) % 26;    
 
 endmodule
 
@@ -187,7 +187,7 @@ module VigenereDecryption (
     input clock,
     output [7:0] decryptedChar
 );
-    reg [79:0] key
+    reg [79:0] key;
 
     always @(posedge load) begin
         key = keyInput;
@@ -197,7 +197,7 @@ module VigenereDecryption (
         key = key >> 8;
     end
 
-    decryptedChar = (cipherChar - key[7: 0]) % 26;   
+    assign decryptedChar = (cipherChar - key[7: 0]) % 26;   
 
 
 endmodule
