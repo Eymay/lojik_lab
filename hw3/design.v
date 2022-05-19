@@ -126,16 +126,16 @@ endmodule
 module CaesarDecryption (
     input [7:0] cipherChar,
     input [4:0] shiftCount,
-    output [7:0] decryptedChar,
+    output [7:0] decryptedChar
 );
 
     wire [25:0] decodedChar;
     wire [25:0] shiftedDecodedChar;
     
 
-    CharDecoder chd1(.char(plainChar), .decodedChar(decodedChar));
+    CharDecoder chd1(.char(cipherChar), .decodedChar(decodedChar));
     CircularLeftShift crs1(.data(decodedChar), .shiftAmount(shiftCount), .out(shiftedDecodedChar));
-    CharEncoder che1(.decodedChar(shiftedDecodedChar), .char(cipherChar));
+    CharEncoder che1(.decodedChar(shiftedDecodedChar), .char(decryptedChar));
     
 endmodule
 
