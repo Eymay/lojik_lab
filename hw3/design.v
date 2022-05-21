@@ -408,6 +408,8 @@ module Rotor1 (
     
 endmodule
 
+*/
+
 module Rotor2 (
     input [25:0] forwardInput,
     input [25:0] backwardInput,
@@ -418,17 +420,13 @@ module Rotor2 (
     output [25:0] forwardOutput,
     output [25:0] backwardOutput
 );
-    reg [25:0] forwardOutput_shifted, backwardOutput_shifted;
-    reg [25:0] forwardInput_shifted, backwardInput_shifted;
+    wire [25:0] forwardOutput_shifted, backwardOutput_shifted;
+    wire [25:0] forwardInput_shifted, backwardInput_shifted;
 
     reg [4:0] position_counter;
 
     always @(posedge load) begin
         position_counter = startPosition;
-        CircularRightShift cr1(.data(forwardInput), .shiftAmount(position_counter), .out(forwardInput_shifted));
-        CircularRightShift cr2(.data(backwardInput), .shiftAmount(position_counter), .out(backwardInput_shifted));
-        CircularLeftShift cl1(.data(forwardOutput_shifted), .shiftAmount(position_counter), .out(forwardOutput));
-        CircularLeftShift cl2(.data(backwardOutput_shifted), .shiftAmount(position_counter), .out(backwardOutput));
     end
 
     always @(posedge clockIn) begin
@@ -437,69 +435,68 @@ module Rotor2 (
         end
     end
 
-    always @(posedge clockIn) begin
-        CircularRightShift cr1(.data(forwardInput), .shiftAmount(position_counter), .out(forwardInput_shifted));
-        CircularRightShift cr2(.data(backwardInput), .shiftAmount(position_counter), .out(backwardInput_shifted));
-        CircularLeftShift cl1(.data(forwardOutput_shifted), .shiftAmount(position_counter), .out(forwardOutput));
-        CircularLeftShift cl2(.data(backwardOutput_shifted), .shiftAmount(position_counter), .out(backwardOutput));
-    end
 
-    forwardOutput[0] = forwardInput[19];
-    forwardOutput[1] = forwardInput[4];
-    forwardOutput[2] = forwardInput[7];
-    forwardOutput[3] = forwardInput[6];
-    forwardOutput[4] = forwardInput[12];
-    forwardOutput[5] = forwardInput[17];
-    forwardOutput[6] = forwardInput[8];
-    forwardOutput[7] = forwardInput[5];
-    forwardOutput[8] = forwardInput[2];
-    forwardOutput[9] = forwardInput[0];
-    forwardOutput[10] = forwardInput[1];
-    forwardOutput[11] = forwardInput[20];
-    forwardOutput[12] = forwardInput[25];
-    forwardOutput[13] = forwardInput[9];
-    forwardOutput[14] = forwardInput[14];
-    forwardOutput[15] = forwardInput[22];
-    forwardOutput[16] = forwardInput[24];
-    forwardOutput[17] = forwardInput[18];
-    forwardOutput[18] = forwardInput[15];
-    forwardOutput[19] = forwardInput[13];
-    forwardOutput[20] = forwardInput[3];
-    forwardOutput[21] = forwardInput[10];
-    forwardOutput[22] = forwardInput[21];
-    forwardOutput[23] = forwardInput[16];
-    forwardOutput[24] = forwardInput[11];
-    forwardOutput[25] = forwardInput[23];
-    backwardInput[0] = backwardOutput[19];
-    backwardInput[1] = backwardOutput[4];
-    backwardInput[2] = backwardOutput[7];
-    backwardInput[3] = backwardOutput[6];
-    backwardInput[4] = backwardOutput[12];
-    backwardInput[5] = backwardOutput[17];
-    backwardInput[6] = backwardOutput[8];
-    backwardInput[7] = backwardOutput[5];
-    backwardInput[8] = backwardOutput[2];
-    backwardInput[9] = backwardOutput[0];
-    backwardInput[10] = backwardOutput[1];
-    backwardInput[11] = backwardOutput[20];
-    backwardInput[12] = backwardOutput[25];
-    backwardInput[13] = backwardOutput[9];
-    backwardInput[14] = backwardOutput[14];
-    backwardInput[15] = backwardOutput[22];
-    backwardInput[16] = backwardOutput[24];
-    backwardInput[17] = backwardOutput[18];
-    backwardInput[18] = backwardOutput[15];
-    backwardInput[19] = backwardOutput[13];
-    backwardInput[20] = backwardOutput[3];
-    backwardInput[21] = backwardOutput[10];
-    backwardInput[22] = backwardOutput[21];
-    backwardInput[23] = backwardOutput[16];
-    backwardInput[24] = backwardOutput[11];
-    backwardInput[25] = backwardOutput[23];
+    CircularRightShift cr1(.data(forwardInput), .shiftAmount(position_counter), .out(forwardInput_shifted));
+    CircularRightShift cr2(.data(backwardInput), .shiftAmount(position_counter), .out(backwardInput_shifted));
+    CircularLeftShift cl1(.data(forwardOutput_shifted), .shiftAmount(position_counter), .out(forwardOutput));
+    CircularLeftShift cl2(.data(backwardOutput_shifted), .shiftAmount(position_counter), .out(backwardOutput));
+    
+    assign forwardOutput_shifted[0] = forwardInput_shifted[19];
+    assign forwardOutput_shifted[1] = forwardInput_shifted[4];
+    assign forwardOutput_shifted[2] = forwardInput_shifted[7];
+    assign forwardOutput_shifted[3] = forwardInput_shifted[6];
+    assign forwardOutput_shifted[4] = forwardInput_shifted[12];
+    assign forwardOutput_shifted[5] = forwardInput_shifted[17];
+    assign forwardOutput_shifted[6] = forwardInput_shifted[8];
+    assign forwardOutput_shifted[7] = forwardInput_shifted[5];
+    assign forwardOutput_shifted[8] = forwardInput_shifted[2];
+    assign forwardOutput_shifted[9] = forwardInput_shifted[0];
+    assign forwardOutput_shifted[10] = forwardInput_shifted[1];
+    assign forwardOutput_shifted[11] = forwardInput_shifted[20];
+    assign forwardOutput_shifted[12] = forwardInput_shifted[25];
+    assign forwardOutput_shifted[13] = forwardInput_shifted[9];
+    assign forwardOutput_shifted[14] = forwardInput_shifted[14];
+    assign forwardOutput_shifted[15] = forwardInput_shifted[22];
+    assign forwardOutput_shifted[16] = forwardInput_shifted[24];
+    assign forwardOutput_shifted[17] = forwardInput_shifted[18];
+    assign forwardOutput_shifted[18] = forwardInput_shifted[15];
+    assign forwardOutput_shifted[19] = forwardInput_shifted[13];
+    assign forwardOutput_shifted[20] = forwardInput_shifted[3];
+    assign forwardOutput_shifted[21] = forwardInput_shifted[10];
+    assign forwardOutput_shifted[22] = forwardInput_shifted[21];
+    assign forwardOutput_shifted[23] = forwardInput_shifted[16];
+    assign forwardOutput_shifted[24] = forwardInput_shifted[11];
+    assign forwardOutput_shifted[25] = forwardInput_shifted[23];
+    assign backwardInput_shifted[0] = backwardOutput_shifted[19];
+    assign backwardInput_shifted[1] = backwardOutput_shifted[4];
+    assign backwardInput_shifted[2] = backwardOutput_shifted[7];
+    assign backwardInput_shifted[3] = backwardOutput_shifted[6];
+    assign backwardInput_shifted[4] = backwardOutput_shifted[12];
+    assign backwardInput_shifted[5] = backwardOutput_shifted[17];
+    assign backwardInput_shifted[6] = backwardOutput_shifted[8];
+    assign backwardInput_shifted[7] = backwardOutput_shifted[5];
+    assign backwardInput_shifted[8] = backwardOutput_shifted[2];
+    assign backwardInput_shifted[9] = backwardOutput_shifted[0];
+    assign backwardInput_shifted[10] = backwardOutput_shifted[1];
+    assign backwardInput_shifted[11] = backwardOutput_shifted[20];
+    assign backwardInput_shifted[12] = backwardOutput_shifted[25];
+    assign backwardInput_shifted[13] = backwardOutput_shifted[9];
+    assign backwardInput_shifted[14] = backwardOutput_shifted[14];
+    assign backwardInput_shifted[15] = backwardOutput_shifted[22];
+    assign backwardInput_shifted[16] = backwardOutput_shifted[24];
+    assign backwardInput_shifted[17] = backwardOutput_shifted[18];
+    assign backwardInput_shifted[18] = backwardOutput_shifted[15];
+    assign backwardInput_shifted[19] = backwardOutput_shifted[13];
+    assign backwardInput_shifted[20] = backwardOutput_shifted[3];
+    assign backwardInput_shifted[21] = backwardOutput_shifted[10];
+    assign backwardInput_shifted[22] = backwardOutput_shifted[21];
+    assign backwardInput_shifted[23] = backwardOutput_shifted[16];
+    assign backwardInput_shifted[24] = backwardOutput_shifted[11];
+    assign backwardInput_shifted[25] = backwardOutput_shifted[23];
     
 endmodule
 
-
+/*
 module Rotor3 (
     input [25:0] forwardInput,
     input [25:0] backwardInput,
