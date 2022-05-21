@@ -131,3 +131,29 @@ module CircularRightShift_test();
     end
 endmodule
  
+module rotorTest();
+    reg [25:0] forwardInput;
+    reg [25:0] backwardInput;
+    reg [4:0] startPosition;
+    reg load;
+    reg clockIn;
+    wire clockOut;
+    wire [25:0] forwardOutput;
+    wire [25:0] backwardOutput;
+
+
+    Rotor2 rotor(.forwardInput(forwardInput),.backwardInput(backwardInput),.startPosition(startPosition),.load(load),.clockIn(clockIn),.clockOut(clockOut),.forwardOutput(forwardOutput),.backwardOutput(backwardOutput));
+
+    always #1 clockIn= ~clockIn;
+
+    initial begin
+        clockIn = 1'b0;
+        startPosition = 0;
+        forwardInput = 26'h0000002; #10;
+        load =1;
+        #2 load = 0;
+        #40;
+        $finish;
+    end
+
+endmodule

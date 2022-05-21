@@ -219,63 +219,63 @@ module VigenereEnvironment (
 endmodule
 
 //Part 4
-/*
+
 module PlugBoard (
     input [25:0] charInput,
     input [25:0] backwardInput,
     output [25:0] forwardOutput,
     output [25:0] backwardOutput
 );
-    backwardInput[0] = charOutput[4];
-    backwardInput[1] = charOutput[10];
-    backwardInput[2] = charOutput[12];
-    backwardInput[3] = charOutput[5];
-    backwardInput[4] = charOutput[11];
-    backwardInput[5] = charOutput[6];
-    backwardInput[6] = charOutput[3];
-    backwardInput[7] = charOutput[16];
-    backwardInput[8] = charOutput[21];
-    backwardInput[9] = charOutput[25];
-    backwardInput[10] = charOutput[13];
-    backwardInput[11] = charOutput[19];
-    backwardInput[12] = charOutput[14];
-    backwardInput[13] = charOutput[22];
-    backwardInput[14] = charOutput[24];
-    backwardInput[15] = charOutput[7];
-    backwardInput[16] = charOutput[23];
-    backwardInput[17] = charOutput[20];
-    backwardInput[18] = charOutput[18];
-    backwardInput[19] = charOutput[15];
-    backwardInput[20] = charOutput[0];
-    backwardInput[21] = charOutput[8];
-    backwardInput[22] = charOutput[1];
-    backwardInput[23] = charOutput[17];
-    backwardInput[24] = charOutput[2];
-    forwardOutput[0] = charInput[4];
-    forwardOutput[1] = charInput[10];
-    forwardOutput[2] = charInput[12];
-    forwardOutput[3] = charInput[5];
-    forwardOutput[4] = charInput[11];
-    forwardOutput[5] = charInput[6];
-    forwardOutput[6] = charInput[3];
-    forwardOutput[7] = charInput[16];
-    forwardOutput[8] = charInput[21];
-    forwardOutput[9] = charInput[25];
-    forwardOutput[10] = charInput[13];
-    forwardOutput[11] = charInput[19];
-    forwardOutput[12] = charInput[14];
-    forwardOutput[13] = charInput[22];
-    forwardOutput[14] = charInput[24];
-    forwardOutput[15] = charInput[7];
-    forwardOutput[16] = charInput[23];
-    forwardOutput[17] = charInput[20];
-    forwardOutput[18] = charInput[18];
-    forwardOutput[19] = charInput[15];
-    forwardOutput[20] = charInput[0];
-    forwardOutput[21] = charInput[8];
-    forwardOutput[22] = charInput[1];
-    forwardOutput[23] = charInput[17];
-    forwardOutput[24] = charInput[2];
+    assign backwardInput[0] = charOutput[4];
+    assign backwardInput[1] = charOutput[10];
+    assign backwardInput[2] = charOutput[12];
+    assign backwardInput[3] = charOutput[5];
+    assign backwardInput[4] = charOutput[11];
+    assign backwardInput[5] = charOutput[6];
+    assign backwardInput[6] = charOutput[3];
+    assign backwardInput[7] = charOutput[16];
+    assign backwardInput[8] = charOutput[21];
+    assign backwardInput[9] = charOutput[25];
+    assign backwardInput[10] = charOutput[13];
+    assign backwardInput[11] = charOutput[19];
+    assign backwardInput[12] = charOutput[14];
+    assign backwardInput[13] = charOutput[22];
+    assign backwardInput[14] = charOutput[24];
+    assign backwardInput[15] = charOutput[7];
+    assign backwardInput[16] = charOutput[23];
+    assign backwardInput[17] = charOutput[20];
+    assign backwardInput[18] = charOutput[18];
+    assign backwardInput[19] = charOutput[15];
+    assign backwardInput[20] = charOutput[0];
+    assign backwardInput[21] = charOutput[8];
+    assign backwardInput[22] = charOutput[1];
+    assign backwardInput[23] = charOutput[17];
+    assign backwardInput[24] = charOutput[2];
+    assign forwardOutput[0] = charInput[4];
+    assign forwardOutput[1] = charInput[10];
+    assign forwardOutput[2] = charInput[12];
+    assign forwardOutput[3] = charInput[5];
+    assign forwardOutput[4] = charInput[11];
+    assign forwardOutput[5] = charInput[6];
+    assign forwardOutput[6] = charInput[3];
+    assign forwardOutput[7] = charInput[16];
+    assign forwardOutput[8] = charInput[21];
+    assign forwardOutput[9] = charInput[25];
+    assign forwardOutput[10] = charInput[13];
+    assign forwardOutput[11] = charInput[19];
+    assign forwardOutput[12] = charInput[14];
+    assign forwardOutput[13] = charInput[22];
+    assign forwardOutput[14] = charInput[24];
+    assign forwardOutput[15] = charInput[7];
+    assign forwardOutput[16] = charInput[23];
+    assign forwardOutput[17] = charInput[20];
+    assign forwardOutput[18] = charInput[18];
+    assign forwardOutput[19] = charInput[15];
+    assign forwardOutput[20] = charInput[0];
+    assign forwardOutput[21] = charInput[8];
+    assign forwardOutput[22] = charInput[1];
+    assign forwardOutput[23] = charInput[17];
+    assign forwardOutput[24] = charInput[2];
 endmodule
 
 
@@ -295,128 +295,70 @@ module Rotor1 (
 
 
 
-    forwardOutput[0] =  forward_rotation[0]
-    forwardOutput[1] =  forward_rotation[1]
-    forwardOutput[2] =  forward_rotation[2]
-    forwardOutput[3] =  forward_rotation[3]
-    forwardOutput[4] =  forward_rotation[4]
-    forwardOutput[5] =  forward_rotation[5]
-    forwardOutput[6] =  forward_rotation[6]
-    forwardOutput[7] =  forward_rotation[7]
-    forwardOutput[8] =  forward_rotation[8]
-    forwardOutput[9] =  forward_rotation[9]
-    forwardOutput[10] = forward_rotation[10]
-    forwardOutput[11] = forward_rotation[11]
-    forwardOutput[12] = forward_rotation[12]
-    forwardOutput[13] = forward_rotation[13]
-    forwardOutput[14] = forward_rotation[14]
-    forwardOutput[15] = forward_rotation[15]
-    forwardOutput[16] = forward_rotation[16]
-    forwardOutput[17] = forward_rotation[17]
-    forwardOutput[18] = forward_rotation[18]
-    forwardOutput[19] = forward_rotation[19]
-    forwardOutput[20] = forward_rotation[20]
-    forwardOutput[21] = forward_rotation[21]
-    forwardOutput[22] = forward_rotation[22]
-    forwardOutput[23] = forward_rotation[23]
-    forwardOutput[24] = forward_rotation[24]
-    forwardOutput[25] = forward_rotation[25]
-    forward_rotation[0] =     forwardInput[7];
-    forward_rotation[1] =     forwardInput[12];
-    forward_rotation[2] =     forwardInput[21];
-    forward_rotation[3] =     forwardInput[17];
-    forward_rotation[4] =     forwardInput[0];
-    forward_rotation[5] =     forwardInput[2];
-    forward_rotation[6] =     forwardInput[22];
-    forward_rotation[7] =     forwardInput[20];
-    forward_rotation[8] =     forwardInput[23];
-    forward_rotation[9] =     forwardInput[18];
-    forward_rotation[10] =    forwardInput[9];
-    forward_rotation[11] =    forwardInput[25];
-    forward_rotation[12] =    forwardInput[15];
-    forward_rotation[13] =    forwardInput[3];
-    forward_rotation[14] =    forwardInput[14];
-    forward_rotation[15] =    forwardInput[13];
-    forward_rotation[16] =    forwardInput[11];
-    forward_rotation[17] =    forwardInput[8];
-    forward_rotation[18] =    forwardInput[4];
-    forward_rotation[19] =    forwardInput[10];
-    forward_rotation[20] =    forwardInput[6];
-    forward_rotation[21] =    forwardInput[5];
-    forward_rotation[22] =    forwardInput[19];
-    forward_rotation[23] =    forwardInput[16];
-    forward_rotation[24] =    forwardInput[24];
-    forward_rotation[25] =    forwardInput[1];
-    
-    backward_rotation[0] = backwardInput[0] ; 
-    backward_rotation[1] = backwardInput[1] ; 
-    backward_rotation[2] = backwardInput[2] ; 
-    backward_rotation[3] = backwardInput[3] ; 
-    backward_rotation[4] = backwardInput[4] ; 
-    backward_rotation[5] = backwardInput[5] ; 
-    backward_rotation[6] = backwardInput[6] ; 
-    backward_rotation[7] = backwardInput[7] ; 
-    backward_rotation[8] = backwardInput[8] ; 
-    backward_rotation[9] = backwardInput[9] ; 
-    backward_rotation[10] = backwardInput[10]; 
-    backward_rotation[11] = backwardInput[11]; 
-    backward_rotation[12] = backwardInput[12]; 
-    backward_rotation[13] = backwardInput[13]; 
-    backward_rotation[14] = backwardInput[14]; 
-    backward_rotation[15] = backwardInput[15]; 
-    backward_rotation[16] = backwardInput[16]; 
-    backward_rotation[17] = backwardInput[17]; 
-    backward_rotation[18] = backwardInput[18]; 
-    backward_rotation[19] = backwardInput[19]; 
-    backward_rotation[20] = backwardInput[20]; 
-    backward_rotation[21] = backwardInput[21]; 
-    backward_rotation[22] = backwardInput[22]; 
-    backward_rotation[23] = backwardInput[23]; 
-    backward_rotation[24] = backwardInput[24]; 
-    backward_rotation[25] = backwardInput[25]; 
+    assign forwardOutput[0] =  forwardInput[7];
+    assign forwardOutput[1] =  forwardInput[12];
+    assign forwardOutput[2] =  forwardInput[21];
+    assign forwardOutput[3] =  forwardInput[17];
+    assign forwardOutput[4] =  forwardInput[0];
+    assign forwardOutput[5] =  forwardInput[2];
+    assign forwardOutput[6] =  forwardInput[22];
+    assign forwardOutput[7] =  forwardInput[20];
+    assign forwardOutput[8] =  forwardInput[23];
+    assign forwardOutput[9] =  forwardInput[18];
+    assign forwardOutput[10] = forwardInput[9];
+    assign forwardOutput[11] = forwardInput[25];
+    assign forwardOutput[12] = forwardInput[15];
+    assign forwardOutput[13] = forwardInput[3];
+    assign forwardOutput[14] = forwardInput[14];
+    assign forwardOutput[15] = forwardInput[13];
+    assign forwardOutput[16] = forwardInput[11];
+    assign forwardOutput[17] = forwardInput[8];
+    assign forwardOutput[18] = forwardInput[4];
+    assign forwardOutput[19] = forwardInput[10];
+    assign forwardOutput[20] = forwardInput[6];
+    assign forwardOutput[21] = forwardInput[5];
+    assign forwardOutput[22] = forwardInput[19];
+    assign forwardOutput[23] = forwardInput[16];
+    assign forwardOutput[24] = forwardInput[24];
+    assign forwardOutput[25] = forwardInput[1];
+ 
+    assign backwardOutput[7] =   backwardInput[0] ; 
+    assign backwardOutput[12] =  backwardInput[1] ; 
+    assign backwardOutput[21] =  backwardInput[2] ; 
+    assign backwardOutput[17] =  backwardInput[3] ; 
+    assign backwardOutput[0] =   backwardInput[4] ; 
+    assign backwardOutput[2] =   backwardInput[5] ; 
+    assign backwardOutput[22] =  backwardInput[6] ; 
+    assign backwardOutput[20] =  backwardInput[7] ; 
+    assign backwardOutput[23] =  backwardInput[8] ; 
+    assign backwardOutput[18] =  backwardInput[9] ; 
+    assign backwardOutput[9] =   backwardInput[10]; 
+    assign backwardOutput[25] =  backwardInput[11]; 
+    assign backwardOutput[15] =  backwardInput[12]; 
+    assign backwardOutput[3] =   backwardInput[13]; 
+    assign backwardOutput[14] =  backwardInput[14]; 
+    assign backwardOutput[13] =  backwardInput[15]; 
+    assign backwardOutput[11] =  backwardInput[16]; 
+    assign backwardOutput[8] =   backwardInput[17]; 
+    assign backwardOutput[4] =   backwardInput[18]; 
+    assign backwardOutput[10] =  backwardInput[19]; 
+    assign backwardOutput[6] =   backwardInput[20]; 
+    assign backwardOutput[5] =   backwardInput[21]; 
+    assign backwardOutput[19] =  backwardInput[22]; 
+    assign backwardOutput[16] =  backwardInput[23]; 
+    assign backwardOutput[24] =  backwardInput[24]; 
+    assign backwardOutput[1] =   backwardInput[25]; 
 
- backwardOutput[7] =    backward_rotation[0]  ;
- backwardOutput[12] =    backward_rotation[1]  ;
- backwardOutput[21] =    backward_rotation[2]  ;
- backwardOutput[17] =    backward_rotation[3]  ;
- backwardOutput[0] =    backward_rotation[4]  ;
- backwardOutput[2] =    backward_rotation[5]  ;
- backwardOutput[22] =    backward_rotation[6]  ;
- backwardOutput[20] =    backward_rotation[7]  ;
- backwardOutput[23] =    backward_rotation[8]  ;
- backwardOutput[18] =    backward_rotation[9]  ;
-  backwardOutput[9] =    backward_rotation[10] ;
-  backwardOutput[25] =    backward_rotation[11] ;
-  backwardOutput[15] =    backward_rotation[12] ;
-  backwardOutput[3] =    backward_rotation[13] ;
-  backwardOutput[14] =    backward_rotation[14] ;
-  backwardOutput[13] =    backward_rotation[15] ;
-  backwardOutput[11] =    backward_rotation[16] ;
-  backwardOutput[8] =    backward_rotation[17] ;
-  backwardOutput[4] =    backward_rotation[18] ;
-  backwardOutput[10] =    backward_rotation[19] ;
-  backwardOutput[6] =    backward_rotation[20] ;
-  backwardOutput[5] =    backward_rotation[21] ;
-  backwardOutput[19] =    backward_rotation[22] ;
-  backwardOutput[16] =    backward_rotation[23] ;
-  backwardOutput[24] =    backward_rotation[24] ;
-  backwardOutput[1] =    backward_rotation[25] ;
-
-  always @(posedge load) begin
-      
-  end
     
 endmodule
 
-*/
-
-module Rotor2 (
+module Rotor1 (
     input [25:0] forwardInput,
     input [25:0] backwardInput,
     input [4:0] startPosition,
     input load,
     input clockIn,
-    output clockOut,
+    output reg clockOut,
     output [25:0] forwardOutput,
     output [25:0] backwardOutput
 );
@@ -431,6 +373,99 @@ module Rotor2 (
 
     always @(posedge clockIn) begin
         if (clockIn == 1) begin
+            if(position_counter == 26)assign clockOut = clockIn;
+            else assign clockOut = 0;
+            position_counter = (position_counter + 1)%26;
+        end
+    end
+
+
+    CircularRightShift cr1(.data(forwardInput), .shiftAmount(position_counter), .out(forwardInput_shifted));
+    CircularRightShift cr2(.data(backwardInput), .shiftAmount(position_counter), .out(backwardInput_shifted));
+    CircularLeftShift cl1(.data(forwardOutput_shifted), .shiftAmount(position_counter), .out(forwardOutput));
+    CircularLeftShift cl2(.data(backwardOutput_shifted), .shiftAmount(position_counter), .out(backwardOutput));
+    
+    assign forwardOutput_shifted[0] =  forwardInput_shifted[7];
+    assign forwardOutput_shifted[1] =  forwardInput_shifted[12];
+    assign forwardOutput_shifted[2] =  forwardInput_shifted[21];
+    assign forwardOutput_shifted[3] =  forwardInput_shifted[17];
+    assign forwardOutput_shifted[4] =  forwardInput_shifted[0];
+    assign forwardOutput_shifted[5] =  forwardInput_shifted[2];
+    assign forwardOutput_shifted[6] =  forwardInput_shifted[22];
+    assign forwardOutput_shifted[7] =  forwardInput_shifted[20];
+    assign forwardOutput_shifted[8] =  forwardInput_shifted[23];
+    assign forwardOutput_shifted[9] =  forwardInput_shifted[18];
+    assign forwardOutput_shifted[10] = forwardInput_shifted[9];
+    assign forwardOutput_shifted[11] = forwardInput_shifted[25];
+    assign forwardOutput_shifted[12] = forwardInput_shifted[15];
+    assign forwardOutput_shifted[13] = forwardInput_shifted[3];
+    assign forwardOutput_shifted[14] = forwardInput_shifted[14];
+    assign forwardOutput_shifted[15] = forwardInput_shifted[13];
+    assign forwardOutput_shifted[16] = forwardInput_shifted[11];
+    assign forwardOutput_shifted[17] = forwardInput_shifted[8];
+    assign forwardOutput_shifted[18] = forwardInput_shifted[4];
+    assign forwardOutput_shifted[19] = forwardInput_shifted[10];
+    assign forwardOutput_shifted[20] = forwardInput_shifted[6];
+    assign forwardOutput_shifted[21] = forwardInput_shifted[5];
+    assign forwardOutput_shifted[22] = forwardInput_shifted[19];
+    assign forwardOutput_shifted[23] = forwardInput_shifted[16];
+    assign forwardOutput_shifted[24] = forwardInput_shifted[24];
+    assign forwardOutput_shifted[25] = forwardInput_shifted[1];
+ 
+    assign backwardOutput_shifted[7] =   backwardInput_shifted[0] ; 
+    assign backwardOutput_shifted[12] =  backwardInput_shifted[1] ; 
+    assign backwardOutput_shifted[21] =  backwardInput_shifted[2] ; 
+    assign backwardOutput_shifted[17] =  backwardInput_shifted[3] ; 
+    assign backwardOutput_shifted[0] =   backwardInput_shifted[4] ; 
+    assign backwardOutput_shifted[2] =   backwardInput_shifted[5] ; 
+    assign backwardOutput_shifted[22] =  backwardInput_shifted[6] ; 
+    assign backwardOutput_shifted[20] =  backwardInput_shifted[7] ; 
+    assign backwardOutput_shifted[23] =  backwardInput_shifted[8] ; 
+    assign backwardOutput_shifted[18] =  backwardInput_shifted[9] ; 
+    assign backwardOutput_shifted[9] =   backwardInput_shifted[10]; 
+    assign backwardOutput_shifted[25] =  backwardInput_shifted[11]; 
+    assign backwardOutput_shifted[15] =  backwardInput_shifted[12]; 
+    assign backwardOutput_shifted[3] =   backwardInput_shifted[13]; 
+    assign backwardOutput_shifted[14] =  backwardInput_shifted[14]; 
+    assign backwardOutput_shifted[13] =  backwardInput_shifted[15]; 
+    assign backwardOutput_shifted[11] =  backwardInput_shifted[16]; 
+    assign backwardOutput_shifted[8] =   backwardInput_shifted[17]; 
+    assign backwardOutput_shifted[4] =   backwardInput_shifted[18]; 
+    assign backwardOutput_shifted[10] =  backwardInput_shifted[19]; 
+    assign backwardOutput_shifted[6] =   backwardInput_shifted[20]; 
+    assign backwardOutput_shifted[5] =   backwardInput_shifted[21]; 
+    assign backwardOutput_shifted[19] =  backwardInput_shifted[22]; 
+    assign backwardOutput_shifted[16] =  backwardInput_shifted[23]; 
+    assign backwardOutput_shifted[24] =  backwardInput_shifted[24]; 
+    assign backwardOutput_shifted[1] =   backwardInput_shifted[25]; 
+    
+endmodule
+
+*/
+
+module Rotor2 (
+    input [25:0] forwardInput,
+    input [25:0] backwardInput,
+    input [4:0] startPosition,
+    input load,
+    input clockIn,
+    output reg clockOut,
+    output [25:0] forwardOutput,
+    output [25:0] backwardOutput
+);
+    wire [25:0] forwardOutput_shifted, backwardOutput_shifted;
+    wire [25:0] forwardInput_shifted, backwardInput_shifted;
+
+    reg [4:0] position_counter;
+
+    always @(posedge load) begin
+        position_counter = startPosition;
+    end
+
+    always @(posedge clockIn) begin
+        if (clockIn == 1) begin
+            if(position_counter == 26)assign clockOut = clockIn;
+            else assign clockOut = 0;
             position_counter = (position_counter + 1)%26;
         end
     end
@@ -496,7 +531,94 @@ module Rotor2 (
     
 endmodule
 
-/*
+module Rotor3 (
+    input [25:0] forwardInput,
+    input [25:0] backwardInput,
+    input [4:0] startPosition,
+    input load,
+    input clockIn,
+    output reg clockOut,
+    output [25:0] forwardOutput,
+    output [25:0] backwardOutput
+);
+    wire [25:0] forwardOutput_shifted, backwardOutput_shifted;
+    wire [25:0] forwardInput_shifted, backwardInput_shifted;
+
+    reg [4:0] position_counter;
+
+    always @(posedge load) begin
+        position_counter = startPosition;
+    end
+
+    always @(posedge clockIn) begin
+        if (clockIn == 1) begin
+            if(position_counter == 26)assign clockOut = clockIn;
+            else assign clockOut = 0;
+            position_counter = (position_counter + 1)%26;
+        end
+    end
+
+
+    CircularRightShift cr1(.data(forwardInput), .shiftAmount(position_counter), .out(forwardInput_shifted));
+    CircularRightShift cr2(.data(backwardInput), .shiftAmount(position_counter), .out(backwardInput_shifted));
+    CircularLeftShift cl1(.data(forwardOutput_shifted), .shiftAmount(position_counter), .out(forwardOutput));
+    CircularLeftShift cl2(.data(backwardOutput_shifted), .shiftAmount(position_counter), .out(backwardOutput));
+    
+    assign forwardOutput_shifted[0] = forwardInput_shifted[19];
+    assign     forwardOutput_shifted[1] = forwardInput_shifted[0];
+    assign     forwardOutput_shifted[2] = forwardInput_shifted[6];
+    assign     forwardOutput_shifted[3] = forwardInput_shifted[1];
+    assign     forwardOutput_shifted[4] = forwardInput_shifted[15];
+    assign     forwardOutput_shifted[5] = forwardInput_shifted[2];
+    assign     forwardOutput_shifted[6] = forwardInput_shifted[18];
+    assign     forwardOutput_shifted[7] = forwardInput_shifted[3];
+    assign     forwardOutput_shifted[8] = forwardInput_shifted[16];
+    assign     forwardOutput_shifted[9] = forwardInput_shifted[4];
+    assign     forwardOutput_shifted[10] = forwardInput_shifted[20];
+    assign     forwardOutput_shifted[11] = forwardInput_shifted[5];
+    assign     forwardOutput_shifted[12] = forwardInput_shifted[21];
+    assign     forwardOutput_shifted[13] = forwardInput_shifted[13];
+    assign     forwardOutput_shifted[14] = forwardInput_shifted[25];
+    assign     forwardOutput_shifted[15] = forwardInput_shifted[7];
+    assign     forwardOutput_shifted[16] = forwardInput_shifted[24];
+    assign     forwardOutput_shifted[17] = forwardInput_shifted[8];
+    assign     forwardOutput_shifted[18] = forwardInput_shifted[23];
+    assign     forwardOutput_shifted[19] = forwardInput_shifted[9];
+    assign     forwardOutput_shifted[20] = forwardInput_shifted[22];
+    assign     forwardOutput_shifted[21] = forwardInput_shifted[11];
+    assign     forwardOutput_shifted[22] = forwardInput_shifted[17];
+    assign     forwardOutput_shifted[23] = forwardInput_shifted[10];
+    assign     forwardOutput_shifted[24] = forwardInput_shifted[14];
+    assign     forwardOutput_shifted[25] = forwardInput_shifted[12];
+    assign     backwardInput_shifted[0] = backwardOutput_shifted[19];
+    assign     backwardInput_shifted[1] = backwardOutput_shifted[0];
+    assign     backwardInput_shifted[2] = backwardOutput_shifted[6];
+    assign     backwardInput_shifted[3] = backwardOutput_shifted[1];
+    assign     backwardInput_shifted[4] = backwardOutput_shifted[15];
+    assign     backwardInput_shifted[5] = backwardOutput_shifted[2];
+    assign     backwardInput_shifted[6] = backwardOutput_shifted[18];
+    assign     backwardInput_shifted[7] = backwardOutput_shifted[3];
+    assign     backwardInput_shifted[8] = backwardOutput_shifted[16];
+    assign     backwardInput_shifted[9] = backwardOutput_shifted[4];
+    assign     backwardInput_shifted[10] = backwardOutput_shifted[20];
+    assign     backwardInput_shifted[11] = backwardOutput_shifted[5];
+    assign     backwardInput_shifted[12] = backwardOutput_shifted[21];
+    assign     backwardInput_shifted[13] = backwardOutput_shifted[13];
+    assign     backwardInput_shifted[14] = backwardOutput_shifted[25];
+    assign     backwardInput_shifted[15] = backwardOutput_shifted[7];
+    assign     backwardInput_shifted[16] = backwardOutput_shifted[24];
+    assign     backwardInput_shifted[17] = backwardOutput_shifted[8];
+    assign     backwardInput_shifted[18] = backwardOutput_shifted[23];
+    assign     backwardInput_shifted[19] = backwardOutput_shifted[9];
+    assign     backwardInput_shifted[20] = backwardOutput_shifted[22];
+    assign     backwardInput_shifted[21] = backwardOutput_shifted[11];
+    assign     backwardInput_shifted[22] = backwardOutput_shifted[17];
+    assign     backwardInput_shifted[23] = backwardOutput_shifted[10];
+    assign     backwardInput_shifted[24] = backwardOutput_shifted[14];
+    assign     backwardInput_shifted[25] = backwardOutput_shifted[12];
+    
+endmodule
+
 module Rotor3 (
     input [25:0] forwardInput,
     input [25:0] backwardInput,
@@ -666,4 +788,3 @@ wire very_slow_clock;
 
     
 endmodule
-*/
