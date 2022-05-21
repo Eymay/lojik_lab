@@ -619,101 +619,37 @@ module Rotor3 (
     
 endmodule
 
-module Rotor3 (
-    input [25:0] forwardInput,
-    input [25:0] backwardInput,
-    input [4:0] startPosition,
-    input load,
-    input clockIn,
-    output [25:0] forwardOutput,
-    output [25:0] backwardOutput
-);
-    forwardOutput[0] = forwardInput[19];
-    forwardOutput[1] = forwardInput[0];
-    forwardOutput[2] = forwardInput[6];
-    forwardOutput[3] = forwardInput[1];
-    forwardOutput[4] = forwardInput[15];
-    forwardOutput[5] = forwardInput[2];
-    forwardOutput[6] = forwardInput[18];
-    forwardOutput[7] = forwardInput[3];
-    forwardOutput[8] = forwardInput[16];
-    forwardOutput[9] = forwardInput[4];
-    forwardOutput[10] = forwardInput[20];
-    forwardOutput[11] = forwardInput[5];
-    forwardOutput[12] = forwardInput[21];
-    forwardOutput[13] = forwardInput[13];
-    forwardOutput[14] = forwardInput[25];
-    forwardOutput[15] = forwardInput[7];
-    forwardOutput[16] = forwardInput[24];
-    forwardOutput[17] = forwardInput[8];
-    forwardOutput[18] = forwardInput[23];
-    forwardOutput[19] = forwardInput[9];
-    forwardOutput[20] = forwardInput[22];
-    forwardOutput[21] = forwardInput[11];
-    forwardOutput[22] = forwardInput[17];
-    forwardOutput[23] = forwardInput[10];
-    forwardOutput[24] = forwardInput[14];
-    forwardOutput[25] = forwardInput[12];
-    backwardInput[0] = backwardOutput[19];
-    backwardInput[1] = backwardOutput[0];
-    backwardInput[2] = backwardOutput[6];
-    backwardInput[3] = backwardOutput[1];
-    backwardInput[4] = backwardOutput[15];
-    backwardInput[5] = backwardOutput[2];
-    backwardInput[6] = backwardOutput[18];
-    backwardInput[7] = backwardOutput[3];
-    backwardInput[8] = backwardOutput[16];
-    backwardInput[9] = backwardOutput[4];
-    backwardInput[10] = backwardOutput[20];
-    backwardInput[11] = backwardOutput[5];
-    backwardInput[12] = backwardOutput[21];
-    backwardInput[13] = backwardOutput[13];
-    backwardInput[14] = backwardOutput[25];
-    backwardInput[15] = backwardOutput[7];
-    backwardInput[16] = backwardOutput[24];
-    backwardInput[17] = backwardOutput[8];
-    backwardInput[18] = backwardOutput[23];
-    backwardInput[19] = backwardOutput[9];
-    backwardInput[20] = backwardOutput[22];
-    backwardInput[21] = backwardOutput[11];
-    backwardInput[22] = backwardOutput[17];
-    backwardInput[23] = backwardOutput[10];
-    backwardInput[24] = backwardOutput[14];
-    backwardInput[25] = backwardOutput[12];
-    
-endmodule
-
 module reflector (
     input [25:0] inputConnection,
     output [25:0] outputConnection
 );
 
-    outputConnection[0] = inputConnection[24];
-    outputConnection[1] = inputConnection[17];
-    outputConnection[2] = inputConnection[20];
-    outputConnection[3] = inputConnection[7];
-    outputConnection[4] = inputConnection[16];
-    outputConnection[5] = inputConnection[18];
-    outputConnection[6] = inputConnection[11];
-    outputConnection[7] = inputConnection[3];
-    outputConnection[8] = inputConnection[15];
-    outputConnection[9] = inputConnection[23];
-    outputConnection[10] = inputConnection[13];
-    outputConnection[11] = inputConnection[6];
-    outputConnection[12] = inputConnection[14];
-    outputConnection[13] = inputConnection[10];
-    outputConnection[14] = inputConnection[12];
-    outputConnection[15] = inputConnection[8];
-    outputConnection[16] = inputConnection[4];
-    outputConnection[17] = inputConnection[1];
-    outputConnection[18] = inputConnection[5];
-    outputConnection[19] = inputConnection[25];
-    outputConnection[20] = inputConnection[2];
-    outputConnection[21] = inputConnection[22];
-    outputConnection[22] = inputConnection[21];
-    outputConnection[23] = inputConnection[9];
-    outputConnection[24] = inputConnection[0];
-    outputConnection[25] = inputConnection[19];
+    assign outputConnection[0] = inputConnection[24];
+    assign outputConnection[1] = inputConnection[17];
+    assign outputConnection[2] = inputConnection[20];
+    assign outputConnection[3] = inputConnection[7];
+    assign outputConnection[4] = inputConnection[16];
+    assign outputConnection[5] = inputConnection[18];
+    assign outputConnection[6] = inputConnection[11];
+    assign outputConnection[7] = inputConnection[3];
+    assign outputConnection[8] = inputConnection[15];
+    assign outputConnection[9] = inputConnection[23];
+    assign outputConnection[10] = inputConnection[13];
+    assign outputConnection[11] = inputConnection[6];
+    assign outputConnection[12] = inputConnection[14];
+    assign outputConnection[13] = inputConnection[10];
+    assign outputConnection[14] = inputConnection[12];
+    assign outputConnection[15] = inputConnection[8];
+    assign outputConnection[16] = inputConnection[4];
+    assign outputConnection[17] = inputConnection[1];
+    assign outputConnection[18] = inputConnection[5];
+    assign outputConnection[19] = inputConnection[25];
+    assign outputConnection[20] = inputConnection[2];
+    assign outputConnection[21] = inputConnection[22];
+    assign outputConnection[22] = inputConnection[21];
+    assign outputConnection[23] = inputConnection[9];
+    assign outputConnection[24] = inputConnection[0];
+    assign outputConnection[25] = inputConnection[19];
     
 endmodule
 
