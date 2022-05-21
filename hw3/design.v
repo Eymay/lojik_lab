@@ -418,6 +418,32 @@ module Rotor2 (
     output [25:0] forwardOutput,
     output [25:0] backwardOutput
 );
+    reg [25:0] forwardOutput_shifted, backwardOutput_shifted;
+    reg [25:0] forwardInput_shifted, backwardInput_shifted;
+
+    reg [4:0] position_counter;
+
+    always @(posedge load) begin
+        position_counter = startPosition;
+        CircularRightShift cr1(.data(forwardInput), .shiftAmount(position_counter), .out(forwardInput_shifted));
+        CircularRightShift cr2(.data(backwardInput), .shiftAmount(position_counter), .out(backwardInput_shifted));
+        CircularLeftShift cl1(.data(forwardOutput_shifted), .shiftAmount(position_counter), .out(forwardOutput));
+        CircularLeftShift cl2(.data(backwardOutput_shifted), .shiftAmount(position_counter), .out(backwardOutput));
+    end
+
+    always @(posedge clockIn) begin
+        if (clockIn == 1) begin
+            position_counter = (position_counter + 1)%26;
+        end
+    end
+
+    always @(posedge clockIn) begin
+        CircularRightShift cr1(.data(forwardInput), .shiftAmount(position_counter), .out(forwardInput_shifted));
+        CircularRightShift cr2(.data(backwardInput), .shiftAmount(position_counter), .out(backwardInput_shifted));
+        CircularLeftShift cl1(.data(forwardOutput_shifted), .shiftAmount(position_counter), .out(forwardOutput));
+        CircularLeftShift cl2(.data(backwardOutput_shifted), .shiftAmount(position_counter), .out(backwardOutput));
+    end
+
     forwardOutput[0] = forwardInput[19];
     forwardOutput[1] = forwardInput[4];
     forwardOutput[2] = forwardInput[7];
