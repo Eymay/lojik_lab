@@ -219,7 +219,7 @@ module VigenereEnvironment (
 endmodule
 
 //Part 4
-
+/*
 module PlugBoard (
     input [25:0] charInput,
     input [25:0] backwardInput,
@@ -669,3 +669,4 @@ wire very_slow_clock;
 
     
 endmodule
+*/
