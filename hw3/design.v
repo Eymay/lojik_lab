@@ -167,6 +167,7 @@ module VigenereEncryption (
     output [7:0] cipherChar
 );
     reg [79:0] key;
+    wire [25:0] newcipherChar;
 
     always @(posedge load) begin
         key = keyInput;
@@ -176,7 +177,10 @@ module VigenereEncryption (
         key = key >> 8;
     end
 
-    assign cipherChar = (plainChar + key[7: 0]) % 26;    
+    assign newcipherChar = (plainChar + key[7: 0]) % 26;
+    
+    CharEncoder che2(.decodedChar(newcipherChar), .char(cipherChar));
+       
 
 endmodule
 
@@ -198,7 +202,7 @@ module VigenereDecryption (
     end
 
     assign decryptedChar = (cipherChar - key[7: 0]) % 26;   
-
+    
 
 endmodule
 
