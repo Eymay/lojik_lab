@@ -227,9 +227,9 @@ module VigenereEncryptiontTest();
     
   VigenereEncryption test(.plainChar(plainChar),.keyInput(keyInput),.load(load),.clock(clock),.cipherChar(cipherChar)); 
     
-    always #1 clock = ~clock; 
+    always #5 clock = ~clock; 
         initial begin
-        clock = 0; plainChar = "I";keyInput = "KADIROZLEM"; load = 1; #10;
+        keyInput = "KADIROZLEM"; load = 0;#2; load = 1; #7 clock = 0; load = 0; #1;plainChar = "I";  #10;
         plainChar = "S"; load = 0; #10;
         plainChar = "T"; load = 0; #10;
         plainChar = "A"; load = 0; #10;
