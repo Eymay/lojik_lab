@@ -216,3 +216,36 @@ module CaesarEnvironmentTest();
       end
    
 endmodule    
+
+module VigenereEncryptiontTest();
+
+    reg [7:0] plainChar; 
+    reg [79:0] keyInput; 
+    reg load;          
+    reg clock;           
+    wire [7:0] cipherChar;
+    
+  VigenereEncryption test(.plainChar(plainChar),.keyInput(keyInput),.load(load),.clock(clock),.cipherChar(cipherChar)); 
+    
+    always #1 clock = ~clock; 
+        initial begin
+        clock = 0; plainChar = "I";keyInput = "KADIROZLEM"; load = 1; #10;
+        plainChar = "S";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "T";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "A";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "N";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "B";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "U";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "L";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "T";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "E";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "C";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "H";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "N";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "I";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "C";keyInput = "KADIROZLEM"; load = 0; #10;
+        
+        
+        $finish;
+        end 
+endmodule
