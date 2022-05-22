@@ -157,3 +157,62 @@ module rotorTest();
     end
 
 endmodule
+
+
+module CaesarEncryptionTest();
+
+    reg [7:0] plainChar;
+    reg [4:0] shiftCount;
+    wire [7:0] cipherChar;
+    
+ CaesarEncryption test(.plainChar(plainChar),.shiftCount(shiftCount),.cipherChar(cipherChar)); 
+   
+    initial begin
+    plainChar = "A"; shiftCount = 5'b00011; #10;
+    plainChar = "F"; shiftCount = 5'b00011; #10;
+    plainChar = "X"; shiftCount = 5'b00011; #10;
+    
+    $finish;
+    end
+
+endmodule    
+
+
+module CaesarDecryptionTest();
+
+    reg [7:0] cipherChar;
+    reg [4:0] shiftCount;
+    wire [7:0] decryptedChar;
+    
+ CaesarDecryption test(.cipherChar(cipherChar),.shiftCount(shiftCount),.decryptedChar(decryptedChar)); 
+   
+    initial begin
+    cipherChar = "A"; shiftCount = 5'b00011; #10;
+    cipherChar = "F"; shiftCount = 5'b00011; #10;
+    cipherChar = "G"; shiftCount = 5'b00011; #10;
+    
+    $finish;
+    end
+
+endmodule  
+
+
+module CaesarEnvironmentTest();
+
+    reg [7:0] plainChar;   
+    reg [4:0] shiftCount;   
+    wire[7:0] cipherChar; 
+    wire [7:0] decryptedChar;
+    
+  CaesarEnvironment test(.plainChar(plainChar),.shiftCount(shiftCount),.cipherChar(cipherChar),.decryptedChar(decryptedChar)); 
+   
+   initial begin
+      plainChar = "A"; shiftCount = 5'b00011; #10;
+      plainChar = "B"; shiftCount = 5'b00011; #10;
+      plainChar = "C"; shiftCount = 5'b00011; #10;
+      plainChar = "D"; shiftCount = 5'b00011; #10;
+      
+      $finish;
+      end
+   
+endmodule    

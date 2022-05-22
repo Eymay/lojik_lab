@@ -118,7 +118,7 @@ module CaesarEncryption (
     
 
     CharDecoder chd1(.char(plainChar), .decodedChar(decodedChar));
-    CircularRightShift crs1(.data(decodedChar), .shiftAmount(shiftCount), .out(shiftedDecodedChar));
+    CircularLeftShift crs1(.data(decodedChar), .shiftAmount(shiftCount), .out(shiftedDecodedChar));
     CharEncoder che1(.decodedChar(shiftedDecodedChar), .char(cipherChar));
     
 endmodule
@@ -134,7 +134,7 @@ module CaesarDecryption (
     
 
     CharDecoder chd1(.char(cipherChar), .decodedChar(decodedChar));
-    CircularLeftShift crs1(.data(decodedChar), .shiftAmount(shiftCount), .out(shiftedDecodedChar));
+    CircularRightShift crs1(.data(decodedChar), .shiftAmount(shiftCount), .out(shiftedDecodedChar));
     CharEncoder che1(.decodedChar(shiftedDecodedChar), .char(decryptedChar));
     
 endmodule
@@ -219,7 +219,7 @@ module VigenereEnvironment (
 endmodule
 
 //Part 4
-
+/*
 module PlugBoard (
     input [25:0] charInput,
     input [25:0] backwardInput,
@@ -441,7 +441,6 @@ module Rotor1 (
     
 endmodule
 
-*/
 
 module Rotor2 (
     input [25:0] forwardInput,
@@ -724,3 +723,4 @@ wire very_slow_clock;
 
     
 endmodule
+*/
