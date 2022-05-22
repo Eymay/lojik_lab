@@ -228,24 +228,94 @@ module VigenereEncryptiontTest();
   VigenereEncryption test(.plainChar(plainChar),.keyInput(keyInput),.load(load),.clock(clock),.cipherChar(cipherChar)); 
     
     always #5 clock = ~clock; 
+    always #5 load =  ~load;
         initial begin
-        keyInput = "KADIROZLEM"; load = 0;#2; load = 1; #7 clock = 0; load = 0; #1;plainChar = "I";  #10;
-        plainChar = "S"; load = 0; #10;
-        plainChar = "T"; load = 0; #10;
-        plainChar = "A"; load = 0; #10;
-        plainChar = "N"; load = 0; #10;
-        plainChar = "B"; load = 0; #10;
-        plainChar = "U"; load = 0; #10;
-        plainChar = "L"; load = 0; #10;
-        plainChar = "T"; load = 0; #10;
-        plainChar = "E"; load = 0; #10;
-        plainChar = "C"; load = 0; #10;
-        plainChar = "H"; load = 0; #10;
-        plainChar = "N"; load = 0; #10;
-        plainChar = "I"; load = 0; #10;
-        plainChar = "C"; load = 0; #10;
+        keyInput = "KADIROZLEM"; ; load = 1;clock = 0;plainChar = "I";  #10;
+        plainChar = "S"; #10;
+        plainChar = "T"; #10;
+        plainChar = "A"; #10;
+        plainChar = "N"; #10;
+        plainChar = "B"; #10;
+        plainChar = "U"; #10;
+        plainChar = "L"; #10;
+        plainChar = "T"; #10;
+        plainChar = "E"; #10;
+        plainChar = "C"; #10;
+        plainChar = "H"; #10;
+        plainChar = "N"; #10;
+        plainChar = "I"; #10;
+        plainChar = "C"; #10;
         
         
         $finish;
         end 
 endmodule
+
+module VigenereDecryptionTest();
+
+    reg [7:0] cipherChar;   
+    reg [79:0] keyInput;    
+    reg load;               
+    reg clock;            
+    wire [7:0] decryptedChar;
+    
+    VigenereDecryption test(.cipherChar(cipherChar),.keyInput(keyInput),.load(load),.clock(clock),.decryptedChar(decryptedChar));
+    
+        always #5 clock = ~clock; 
+        always #5 load =  ~load;
+            initial begin
+            keyInput = "KADIROZLEM"; ; load = 1;clock = 0; cipherChar = "S";  #10;
+            cipherChar = "S"; #10;
+            cipherChar = "W"; #10;
+            cipherChar = "I"; #10;
+            cipherChar = "E"; #10;
+            cipherChar = "P"; #10;
+            cipherChar = "T"; #10;
+            cipherChar = "W"; #10;
+            cipherChar = "X"; #10;
+            cipherChar = "Q"; #10;
+            cipherChar = "M"; #10;
+            cipherChar = "H"; #10;
+            cipherChar = "Q"; #10;
+            cipherChar = "Q"; #10;
+            cipherChar = "T"; #10;  
+    
+    $finish;
+    end
+endmodule  
+
+
+module VigenereEnvironmentTest();
+
+    reg [7:0] plainChar; 
+    reg [79:0] keyInput; 
+    reg load;          
+    reg clock;           
+    wire [7:0] cipherChar;
+    wire [7:0] decryptedChar;
+    
+  VigenereEnvironment test(.plainChar(plainChar),.keyInput(keyInput),.load(load),.clock(clock),.cipherChar(cipherChar),.decryptedChar(decryptedChar)); 
+    
+    always #5 clock = ~clock; 
+    always #5 load =  ~load;
+        initial begin
+        keyInput = "KADIROZLEM"; ; load = 1;clock = 0;plainChar = "I";  #10;
+        plainChar = "S"; #10;
+        plainChar = "T"; #10;
+        plainChar = "A"; #10;
+        plainChar = "N"; #10;
+        plainChar = "B"; #10;
+        plainChar = "U"; #10;
+        plainChar = "L"; #10;
+        plainChar = "T"; #10;
+        plainChar = "E"; #10;
+        plainChar = "C"; #10;
+        plainChar = "H"; #10;
+        plainChar = "N"; #10;
+        plainChar = "I"; #10;
+        plainChar = "C"; #10;
+        
+        
+        $finish;
+        end 
+endmodule  

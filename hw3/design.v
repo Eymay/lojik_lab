@@ -219,27 +219,6 @@ module VigenereDecryption (
 
 endmodule
 
-module VigenereDecryption (
-    input [7:0] cipherChar,
-    input [79:0] keyInput,
-    input load,
-    input clock,
-    output [7:0] decryptedChar
-);
-    reg [79:0] key;
-
-    always @(posedge load) begin
-        key = keyInput;
-    end
-
-    always @(posedge clock) begin
-        key = key >> 8;
-    end
-    
-    assign decryptedChar = (cipherChar - key[7: 0]) % (26*26);   
-
-
-endmodule
 
 module VigenereEnvironment (
     input [7:0] plainChar,
@@ -762,4 +741,4 @@ wire very_slow_clock;
 
     
 endmodule
-*/
+
