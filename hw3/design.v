@@ -169,7 +169,7 @@ module VigenereEncryption (
     reg [79:0] key;
     //wire [79:0] shifted_key;
     //reg [4:0] shift = 0;
-    wire [25:0] plainDecodedChar, cipherDecodedChar;
+    wire [25:0] plainDecodedChar, cipherDecodedChar, keyDecodedChar;
 
     always @(posedge load) begin
         key = keyInput;
@@ -182,8 +182,9 @@ module VigenereEncryption (
     end
     //CircularRightShift circ(.data(key), .shiftAmount(shift), .out(shifted_key));
     
-    CharDecoder dec(.char(plainChar), .decodedChar(plainDecodedChar));
-    assign cipherDecodedChar = (plainDecodedChar + key[7: 0]) % 26;    
+    CharDecoder dec1(.char(plainChar), .decodedChar(plainDecodedChar));
+    CharDecoder dec2(.char(key[7: 0]), .decodedChar(keyDecodedChar));
+    assign cipherDecodedChar = (plainDecodedChar + keyDecodedChar ) % 26;    
     CharEncoder enc(.decodedChar(cipherDecodedChar), .char(cipherChar));
 
 endmodule
@@ -206,7 +207,7 @@ module VigenereDecryption (
     end
     
     assign decryptedChar = (cipherChar - key[7: 0]) % 26;   
-    
+
 
 endmodule
 
