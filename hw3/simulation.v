@@ -319,3 +319,17 @@ module VigenereEnvironmentTest();
         $finish;
         end 
 endmodule  
+
+
+module EnigmaMachineTest();
+
+           
+    reg [7:0] char;         
+    reg [4:0] startPosition1;
+    reg [4:0] startPosition2;
+    reg [4:0] startPosition3;
+    reg load;               
+    reg clock;              
+    wire [7:0] outChar;      
+ 
+ endmodule
