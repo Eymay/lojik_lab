@@ -197,6 +197,36 @@ module VigenereDecryption (
     output [7:0] decryptedChar
 );
     reg [79:0] key;
+    //wire [79:0] shifted_key;
+    //reg [4:0] shift = 0;
+    wire [25:0] cipherDecodedChar, plainDecodedChar, keyDecodedChar;
+
+    always @(posedge load) begin
+        key = keyInput;
+    end
+
+    always @(posedge clock && load == 0) begin
+
+        key = {key[7:0], key[79:8]};
+        
+    end
+    //CircularRightShift circ(.data(key), .shiftAmount(shift), .out(shifted_key));
+    
+    CharDecoder dec1(.char(cipherChar), .decodedChar(cipherDecodedChar));
+    CharDecoder dec2(.char(key[7: 0]), .decodedChar(keyDecodedChar));
+    assign plainDecodedChar = (cipherDecodedChar - keyDecodedChar ) % 26;    
+    CharEncoder enc(.decodedChar(plainDecodedChar), .char(decryptedChar));
+
+endmodule
+
+module VigenereDecryption (
+    input [7:0] cipherChar,
+    input [79:0] keyInput,
+    input load,
+    input clock,
+    output [7:0] decryptedChar
+);
+    reg [79:0] key;
 
     always @(posedge load) begin
         key = keyInput;
@@ -228,7 +258,7 @@ module VigenereEnvironment (
 endmodule
 
 //Part 4
-/*
+
 module PlugBoard (
     input [25:0] charInput,
     input [25:0] backwardInput,
@@ -686,7 +716,7 @@ wire slow_clock;
 wire very_slow_clock;
 
 
-    CharDecoder decoder(.input(char), .output(decodedChar));
+    CharDecoder decoder(.char(char), .decodedChar(decodedChar));
     PlugBoard plugBoard(
     .charInput(decodedChar),
     .backwardInput(backward_R1toplug),
