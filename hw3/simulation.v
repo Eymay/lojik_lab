@@ -230,20 +230,20 @@ module VigenereEncryptiontTest();
     always #1 clock = ~clock; 
         initial begin
         clock = 0; plainChar = "I";keyInput = "KADIROZLEM"; load = 1; #10;
-        plainChar = "S";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "T";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "A";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "N";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "B";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "U";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "L";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "T";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "E";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "C";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "H";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "N";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "I";keyInput = "KADIROZLEM"; load = 0; #10;
-        plainChar = "C";keyInput = "KADIROZLEM"; load = 0; #10;
+        plainChar = "S"; load = 0; #10;
+        plainChar = "T"; load = 0; #10;
+        plainChar = "A"; load = 0; #10;
+        plainChar = "N"; load = 0; #10;
+        plainChar = "B"; load = 0; #10;
+        plainChar = "U"; load = 0; #10;
+        plainChar = "L"; load = 0; #10;
+        plainChar = "T"; load = 0; #10;
+        plainChar = "E"; load = 0; #10;
+        plainChar = "C"; load = 0; #10;
+        plainChar = "H"; load = 0; #10;
+        plainChar = "N"; load = 0; #10;
+        plainChar = "I"; load = 0; #10;
+        plainChar = "C"; load = 0; #10;
         
         
         $finish;

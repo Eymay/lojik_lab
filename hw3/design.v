@@ -206,7 +206,7 @@ module VigenereDecryption (
     end
     
     assign decryptedChar = (cipherChar - key[7: 0]) % 26;   
-
+    
 
 endmodule
 
