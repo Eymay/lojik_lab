@@ -330,6 +330,22 @@ module EnigmaMachineTest();
     reg [4:0] startPosition3;
     reg load;               
     reg clock;              
-    wire [7:0] outChar;      
+    wire [7:0] outChar;
+    
+    always #5 clock = ~clock; 
+    initial begin
+    load = 1; clock = 0; #5;
+    char="A"; startPosition1=5'b00000; startPosition2=5'b00000;startPosition3=5'b00000; load = 0; #10;
+    char="B"; startPosition1=5'b00000; startPosition2=5'b00000;startPosition3=5'b00000; #10;
+    char="C"; startPosition1=5'b00000; startPosition2=5'b00000;startPosition3=5'b00000; #10;
+    char="D"; startPosition1=5'b00000; startPosition2=5'b00000;startPosition3=5'b00000; #10;
+    char="E"; startPosition1=5'b00000; startPosition2=5'b00000;startPosition3=5'b00000; #10;
+    char="F"; startPosition1=5'b00000; startPosition2=5'b00000;startPosition3=5'b00000; #10;
+    char="G"; startPosition1=5'b00000; startPosition2=5'b00000;startPosition3=5'b00000; #10;
+ 
+    
+   
+    $finish;
+    end      
  
  endmodule
